@@ -1,0 +1,75 @@
+<!-- this is the home page display the user manual how things work here -->
+<!-- a done reading button to navigate to login register page-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Website HomePage</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+        />
+    </head>
+    <body  style="background-image: url(okkk.png); background-size: cover; display: flex;">
+        <h1 style="left: 60%; position:fixed;font-size:60px;color:purple;">Connecto</h1>
+        <button style="right:50px; top:40px;size: 160px;font-size: 25px; padding: 10px 10px; position:fixed;background-color: #E8AFFC ;border: none;border-radius: 50px;color:purple; box-shadow: 0 2px 4px darkslateblue;cursor: pointer;" onclick="window.location.href='loginsignupuser.html';">Login|Signup</button>
+            <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="content">
+                    Welcome to Appname, an Electronic health record (EHR). This is a digital version of traditional paper-based medical record for an individual. If this is your first time here, we recommend you to go through the user manual for a quick overview fo the website
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="content">
+                    Intro
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="content">
+                    Intro
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="content">
+                    Intro
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="content">
+                    Intro
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <!-- Swiper JS -->
+          <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+      
+          <!-- Initialize Swiper -->
+          <script>
+            var swiper = new Swiper(".mySwiper", {
+              effect: "coverflow",
+              grabCursor: true,
+              centeredSlides: true,
+              slidesPerView: "auto",
+              coverflowEffect: {
+                rotate: 50,
+                stretch: 10,
+                depth: 150,
+                modifier: 4,
+                slideShadows: true,
+              },
+              pagination: {
+                el: ".swiper-pagination",
+              },
+            });
+          </script>
+    </body>
+    
+</html>
+
+
