@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login|SignUp Page</title>
+        <link rel="stylesheet" href="style4.css">
+    </head>
+    <body>
+        <div class="screen">
+            <select id="typeuser" name="typeuser" onchange="pagehandler(this.value,'typeuser')">
+                <option value="" disabled selected hidden > Not an Admin?</option>
+                <option value="Doctor" class="dropcontent">Doctor</option>
+                <option value="Admin"  class="dropcontent">Admin</option>
+                <option value="User"   class="dropcontent">User</option>
+            </select>
+            <div class="logincard">
+                <div style="font-family:'Dancing Script', cursive; text-align: center;padding-top:60px;padding-left: 10px; font-weight: bold; font-size: 30px; color: black;">Connecto</div>
+                <div class="container" style="position:absolute; padding:25px;">
+                    <form action="home.html">
+                        <input type="text" id="username" name="uname" placeholder="Enter your name..">
+                        <input type="password" id="pass" name="pass" placeholder="Enter your password..">
+                        <input type="submit" id="submitsignin" value="SignIn">
+                    </form>
+                </div>
+            </div>
+            <div class="registercard"> 
+                <div style="font-family:'Dancing Script', cursive; text-align: center;padding-top: 40px; font-weight: bold; font-size: 30px; color: black;">Connecto</div>
+                <div class="container" style="position:absolute; padding:40px;">
+                    <form action="home.html">
+                        <input type="text" id="uname" name="uname" placeholder="Enter your name..">
+                        <input type="password" id="password" name="pass" placeholder="Enter your password..">
+                        <input type="checkbox" onclick="myFunction()"  >
+                        
+                        <input type="text" id="adminpass" name="adminpass" placeholder="Enter your admin passkey..">
+                        <input type="submit" id="submitsignup" value="SignUp">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="loginutility.js"></script>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<!-- page for displaying home Page
+display account of the user here 
+aur nav bars for him to navigate to other pages
+nav bar: past prescriptions, doctor booking, on doctor page and allergy button to help him search for allergies and doctors related who can help -->
+<!-- or do this
+make 3 bars -> about me, past prescriptions, past doctors, past reviews 
+where to put search for doctors ?? -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HomePage</title>
+        <link rel="stylesheet" href="style5.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+        <div class="split left">
+            <div class="userimg" >
+                <img src="avatar.png" style="width: 45%; height:60% ;padding: 15px; background-size: cover; border-radius: 110px;">
+            </div>
+            <div class="navbar">
+                <button class="btn" style="background-color: white;"onclick="window.location.href='home.html'">About Me</button>
+                <button class="btn" onclick="window.location.href='prescription.html'">Past Prescriptions</button>
+                <button class="btn" onclick="window.location.href='doctor.html'">Past Doctors</button>
+                <button class="btn" onclick="window.location.href='review.html'">Past reviews</button>
+                <button class="btn" onclick="window.location.href='find_doctor.html'">Find a new doctor</button>
+            </div>
+        </div>
+        <div class="split right">
+            <div class="pagetitle">
+                <p class="pagehead">Your profile</p>
+                <i class="material-icons">notifications</i>
+            </div>
+            <div class="profilecard">
+                <div class="cardhead">
+                    <img src="avatar.png" style="width: 15%; height:20%; padding:25px ; padding-left: 60px;background-size:cover;border-radius: 150px;">
+                    <div class="about">
+                       <p><b>Name_of_the_person</b><br>age</p>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="cardabout">
+                    <div class="leftabout">
+                        <div><p>
+                            <b>Martial Status</b><br>martial_stat
+                        </p></div>
+                        <div><p>
+                            <b>Race</b><br>race
+                        </p></div>
+                        <div><p>
+                            <b>Gender</b><br>gender
+                        </p></div>
+                    </div>
+                    <div class="rightabout">
+                        <div><p>
+                            <b>Address</b><br>address
+                        </p></div>
+                        <div><p>
+                            <b>Annual Income</b><br>annual_income
+                        </p></div>
+                        <div>
+                            <button class="detailchange">change details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="loginutility.js"></script>
+    </body>
+</html>
