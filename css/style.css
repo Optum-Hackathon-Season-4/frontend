@@ -1,0 +1,58 @@
+html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+      #sheet{
+        background: rgba(246, 221, 221, 0.6);
+        color: #fff;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+      }
+
+      .swiper {
+        position: absolute;
+        top: 30%;
+        width: 50%;
+        height: 50%;
+        margin: auto;
+        align-content: center;
+        align-self: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .swiper-slide {
+        align-self: center;
+        background-position: center;
+        background-size: cover;
+        width: 600px;
+        height: 300px;
+        background-color: #F2DFF9;
+        opacity: 0.7;
+        border-radius: 30px;
+        margin: auto;
+      }
+
+      .content {
+        color: black;
+        padding: 50px;
+        text-align: justify;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'Courier New', Courier, monospace;
+        margin: auto;
+        height: 300px;
+        justify-content: center;
+        vertical-align: middle;
+      }

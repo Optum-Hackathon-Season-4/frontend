@@ -1,0 +1,81 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+.split{
+    height: 100%;
+    position: fixed;
+}
+.left{
+    width: 20%;
+    background-color: rgb(193, 185, 241);
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 40px;
+}
+.right{
+    width: 79.5%;
+    right: 0%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color:whitesmoke;
+}
+.userimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+}
+.navbar{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn{
+    background-color:  rgb(193, 185, 241);
+    border: none;
+    padding: 5%;
+    margin-left: 4%;
+    border-top-left-radius:20px ;
+    border-bottom-left-radius: 20px;
+    font-weight: bold;
+    font-size: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+}
+
+
+.btn:hover{
+    background-color:  rgb(191, 147, 233);
+    border: none;
+    padding: 5%;
+    margin-left: 4%;
+    border-top-left-radius:20px ;
+    border-bottom-left-radius: 20px;
+    font-weight: bold;
+    font-size: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+}
+
+
+.pagetitle{
+    height: 8%;
+    width: 95%;
+    margin-left: 2%;
+    margin-right: 5%;
+    justify-content: space-between;
+    border-bottom-width: 2px;
+    border-bottom-color: grey;
+    border-bottom-style: solid;
+    display: flex;
+}
+.pagehead{
+    font-weight: bold;
+    font-size: 150%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.material-icons { 
+    font-size: 10px;
+    margin: 2%;
+ }
