@@ -26,6 +26,7 @@ html,body{
     grid-template-columns: auto auto;
     grid-row-gap: 15%;
 }
+
 .userimg{
     display: flex;
     justify-content: center;
