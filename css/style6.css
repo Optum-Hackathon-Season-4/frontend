@@ -96,14 +96,15 @@ html,body{
     height: 100%;
     display: flex;
     margin: auto;
-    border-right: 4px solid palegoldenrod;
+    background-color: palegoldenrod;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 .midcard{
     width: 55%;
     height: 100%;
     padding-left: 3%;
-    border-right: 2px solid palegoldenrod;
 
 }
 
