@@ -339,3 +339,59 @@ html,body{
     background-color:  rgb(191, 147, 233);
     
 }
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    margin: auto;
+  }
+  
+  /* The Close Button */
+  #close1,#close2,#close3,#close4,#close5 {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  #close1:hover,
+  #close1:focus ,#close2:hover,
+  #close2:focus ,#close3:hover,
+  #close3:focus ,#close4:hover,
+  #close4:focus ,#close5:hover,
+  #close5:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+  .tabb{
+    margin: auto;
+    width: 100%;
+  }
+
+  table,th,td{
+    padding: 1%;
+  border: 1px solid black;
+  border-collapse: collapse;
+  }
