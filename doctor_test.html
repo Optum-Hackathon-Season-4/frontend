@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DoctorPage</title>
+    <link rel="stylesheet" href="doctor_style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="split left">
+      <div class="userimg">
+        <img
+          src="avatar.png"
+          style="
+            width: 45%;
+            height: 60%;
+            padding: 15px;
+            background-size: cover;
+            border-radius: 110px;
+          "
+        />
+      </div>
+      <div class="navbar">
+        <button class="btn" onclick="window.location.href='doctor_home.html'">
+          About Me
+        </button>
+        <button
+          class="btn"
+          onclick="window.location.href='doctor_prescription.html'"
+        >
+          Past Prescriptions
+        </button>
+        <button
+          class="btn"
+          onclick="window.location.href='doctor_operation.html'"
+        >
+          Past Operations
+        </button>
+        <button class="btn"style="background-color: white" onclick="window.location.href='doctor_test.html'">
+          Past Medical Tests
+        </button>
+        <!-- <button class="btn" onclick="window.location.href='find_doctor.html'">Find a new doctor</button> -->
+      </div>
+    </div>
+
+    <!-- <div class="search">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <form class="example" action="action_page.php">
+            <input type="text" placeholder="llEnter the Patient ID" name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div> -->
+
+    <div class="split right">
+      <div></div>
+      <div class="search>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
+      <form class="example" action="action_page.php">
+        <input type="text" placeholder="Enter the Patient ID" name="search" />
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+
+    <div>
+      <div class="details">
+        <div style="text-align: center" class="opdate"><b>25 Oct 2022</b></div>
+        <br />
+        <div><b>Medical Test ID: </b>#12345</div>
+        <div><b>Recommended by: </b>Dr Sani</div>
+        <div><b>Reason: </b>Leg Fracture</div>
+        <div><b>Total Cost: </b>₹2000</div>
+        <div><b>Discount Cost: </b>₹1599</div>
+        <!-- <div><b>Duration:</b> 2 weeks</div> -->
+      </div>
+    </div>
+
+    <div>
+        <div class="details">
+          <div style="text-align: center" class="opdate"><b>25 Oct 2022</b></div>
+          <br />
+          <div><b>Medical Test ID: </b>#12345</div>
+          <div><b>Recommended by: </b>Dr Sani</div>
+          <div><b>Reason: </b>Leg Fracture</div>
+          <div><b>Total Cost: </b>₹2000</div>
+          <div><b>Discount Cost: </b>₹1599</div>
+          <!-- <div><b>Duration:</b> 2 weeks</div> -->
+        </div>
+      </div>
+
+      <div>
+        <div class="details">
+          <div style="text-align: center" class="opdate"><b>25 Oct 2022</b></div>
+          <br />
+          <div><b>Medical Test ID: </b>#12345</div>
+          <div><b>Recommended by: </b>Dr Sani</div>
+          <div><b>Reason: </b>Leg Fracture</div>
+          <div><b>Total Cost: </b>₹2000</div>
+          <div><b>Discount Cost: </b>₹1599</div>
+          <!-- <div><b>Duration:</b> 2 weeks</div> -->
+        </div>
+      </div>
+    
+    <script>
+      function myFunction() {
+        var x = document.getElementById('password');
+        if (x.type === 'password') {
+          x.type = 'text';
+        } else {
+          x.type = 'password';
+        }
+      }
+
+      function pagehandler(value, idd) {
+        if (value == 'User') {
+          window.location.href = 'loginsignupuser.html';
+        } else if (value == 'Admin') {
+          window.location.href = 'loginsignupadmin.html';
+        } else if (value == 'Doctor') {
+          window.location.href = 'loginsignupdoctor.html';
+        }
+        document.getElementById(idd).selectedIndex = -1;
+      }
+    </script>
+  </body>
+</html>
