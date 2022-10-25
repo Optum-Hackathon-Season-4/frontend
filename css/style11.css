@@ -22,8 +22,9 @@ html,body{
     height: calc(100%);
     overflow-y: scroll;
     background-color:whitesmoke;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row-gap: 15%;
 }
 .userimg{
     display: flex;
@@ -84,3 +85,132 @@ html,body{
     font-size: 10px;
     margin: 2%;
  }
+
+.rating_card{
+    margin: auto;
+    width: 80%;
+    background-color: white;
+    border-radius: 20px;
+    min-height: 300px;
+}
+
+.topdet{
+    height: 30%;
+    width: 100%;
+    background-color:  rgb(246, 224, 191);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.botdet{
+    height: 70%;
+    display: flex;
+}
+.txt{
+    padding: 5%;
+    margin:0%;
+}
+
+
+.ratings{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2%;
+ }
+
+ .treatment_rating,.collaboration_rating,.communication_rating,.availability,.commentfordoctor{
+    display: flex;
+    margin: auto;
+ }
+
+
+ .rating {
+    display: inline-block;
+    position: relative;
+    height: 20px;
+    line-height: 50px;
+    font-size: 20px;
+    width: 100%;
+  }
+  
+  .rating label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  .rating label:last-child {
+    position: static;
+  }
+  
+  .rating label:nth-child(1) {
+    z-index: 5;
+  }
+  
+  .rating label:nth-child(2) {
+    z-index: 4;
+  }
+  
+  .rating label:nth-child(3) {
+    z-index: 3;
+  }
+  
+  .rating label:nth-child(4) {
+    z-index: 2;
+  }
+  
+  .rating label:nth-child(5) {
+    z-index: 1;
+  }
+  
+  .rating label input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  
+  .rating label .icon {
+    float: left;
+    color: transparent;
+    height: 10px;
+  }
+  
+  .rating label:last-child .icon {
+    color: #000;
+  }
+  
+  .rating:not(:hover) label input:checked ~ .icon,
+  .rating:hover label:hover input ~ .icon {
+    color: #09f;
+  }
+  
+  .rating label input:focus:not(:checked) ~ .icon:last-child {
+    color: #000;
+    text-shadow: 0 0 5px #09f;
+  }
+
+  textarea{
+    margin-left:10% ;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 12px;
+    resize: none;
+    
+  }
+  .labelss{
+    width: 70%;
+    padding-bottom: 5%;
+  }
+
+  .lab{
+    background-color:  rgb(217, 212, 244);
+    margin: 8%;
+    border-radius: 20px;
+    padding: 3%;
+    font-size: 80%;
+  }
