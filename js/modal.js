@@ -11,7 +11,6 @@ function fun(modalid,buttonid,closeid){
         modal.style.display = "none";
     }
     }
-
 }
 
 
