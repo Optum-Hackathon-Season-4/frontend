@@ -105,29 +105,54 @@
           <!-- <div><b>Duration:</b> 2 weeks</div> -->
         </div>
       </div>
-      <div>
-        <button class="addbtn" >Suggest Test</button>
-    </div>
-    <script>
-      function myFunction() {
-        var x = document.getElementById('password');
-        if (x.type === 'password') {
-          x.type = 'text';
-        } else {
-          x.type = 'password';
-        }
-      }
 
-      function pagehandler(value, idd) {
-        if (value == 'User') {
-          window.location.href = 'loginsignupuser.html';
-        } else if (value == 'Admin') {
-          window.location.href = 'loginsignupadmin.html';
-        } else if (value == 'Doctor') {
-          window.location.href = 'loginsignupdoctor.html';
-        }
-        document.getElementById(idd).selectedIndex = -1;
-      }
-    </script>
+
+
+      <div>
+        <button class="addbtn" onclick="fun('myModaladdm','buttnaddm','closeaddm')"id="buttnaddm">Suggest Test</button>
+    </div>
+    <div id="myModaladdm" class="modal">
+        <div class="modal-content">
+          <span id="closeaddm">&times;</span>
+          <!-- form -->
+          <div class="form-style-5">
+            <form>
+
+
+              <fieldset>
+                <legend><span class="number">1</span>Enter the Medical Test ID</legend>
+                <input type="text" name="field1" placeholder="Test ID...">
+                 </label>
+            </fieldset>
+
+              <fieldset>
+                <legend><span class="number">2</span>Name of the Test</legend>
+                <input type="text" name="field1" placeholder="Enter the name of the Test...">
+                </fieldset>
+
+            <fieldset>
+            <legend><span class="number">3</span>Reason for the test</legend>
+            <textarea class="texta" name="field3" placeholder="Mention the reason for which test is required.."></textarea>
+        </fieldset>
+
+            <!-- <fieldset>
+            <legend><span class="number">4</span>Expected Duration</legend>
+            <input type="text" name="field1" placeholder="In number of weeks">
+            </fieldset> -->
+
+            <fieldset>
+                <legend><span class="number">5</span>Approximate Cost (in ₹)</legend>
+                <input type="text" name="field1" placeholder="Enter the approximate amount to be charged...">
+                 </label>
+            </fieldset>
+
+            <input type="submit" value="Suggest Test" />
+            </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js\doctor.js"></script>
   </body>
 </html>
