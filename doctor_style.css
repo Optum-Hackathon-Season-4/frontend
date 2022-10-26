@@ -503,7 +503,7 @@ html,body{
 .form-style-5 input[type="submit"]:hover,
 .form-style-5 input[type="button"]:hover
 {
-	background: rgb(191, 147, 233);
+	background: rgb(176, 114, 235);
 }
 
 
@@ -515,4 +515,26 @@ html,body{
 
 .texta{
   margin-bottom: 0px;
+}
+
+
+
+
+.addb{
+  background-color:  rgb(193, 185, 241);
+  
+  border: none;
+  padding: 3%;
+  margin: auto;
+  border-radius:20px ;
+  font-weight: bold;
+  font-size: 80%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  cursor: pointer;
+}
+
+
+.addb:hover{
+  background-color:  rgb(191, 147, 233);
+  
 }
