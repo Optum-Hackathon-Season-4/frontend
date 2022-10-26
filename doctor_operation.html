@@ -123,30 +123,54 @@
           <div><b>Duration:</b> 2 weeks</div>
         </div>
       </div>
+      
+
       <div>
-        <button class="addbtn" >Recommend Operation</button>
+        <button class="addbtn" onclick="fun('myModaladdo','buttnaddo','closeaddo')"id="buttnaddo">Recommend Operation</button>
+    </div>
+    <div id="myModaladdo" class="modal">
+        <div class="modal-content">
+          <span id="closeaddo">&times;</span>
+          <!-- form -->
+          <div class="form-style-5">
+            <form>
+
+
+              <fieldset>
+                <legend><span class="number">1</span>Enter the Operation ID</legend>
+                <input type="text" name="field1" placeholder="Operation ID...">
+                 </label>
+            </fieldset>
+
+              <fieldset>
+                <legend><span class="number">2</span>Name of the Operation</legend>
+                <input type="text" name="field1" placeholder="Enter the name of the Operation..">
+                </fieldset>
+
+            <fieldset>
+            <legend><span class="number">3</span>Reason for the operation</legend>
+            <textarea class="texta" name="field3" placeholder="Mention the reason for which surgery is required.."></textarea>
+        </fieldset>
+
+            <fieldset>
+            <legend><span class="number">4</span>Expected Duration</legend>
+            <input type="text" name="field1" placeholder="In number of weeks">
+            </fieldset>
+
+            <fieldset>
+                <legend><span class="number">5</span>Approximate Cost (in ₹)</legend>
+                <input type="text" name="field1" placeholder="Enter the approximate amount to be charged...">
+                 </label>
+            </fieldset>
+
+            <input type="submit" value="Recommend Operation" />
+            </form>
+            </div>
+        </div>
     </div>
 
-    <script>
-      function myFunction() {
-        var x = document.getElementById('password');
-        if (x.type === 'password') {
-          x.type = 'text';
-        } else {
-          x.type = 'password';
-        }
-      }
 
-      function pagehandler(value, idd) {
-        if (value == 'User') {
-          window.location.href = 'loginsignupuser.html';
-        } else if (value == 'Admin') {
-          window.location.href = 'loginsignupadmin.html';
-        } else if (value == 'Doctor') {
-          window.location.href = 'loginsignupdoctor.html';
-        }
-        document.getElementById(idd).selectedIndex = -1;
-      }
-    </script>
+
+    <script src="js\doctor.js"></script>
   </body>
 </html>
