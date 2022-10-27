@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Approve feedback</title>
+        <link rel="stylesheet" href="css\style17.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="split left">
+            <div class="userimg" >
+                <img src="other/avatar.png" style="width: 45%; height:60% ;padding: 15px; background-size: cover; border-radius: 110px;">
+            </div>
+            <div class="navbar">
+                <button class="btn" onclick="window.location.href='admin_addhospital.html'">Add Hospital</button>
+                <button class="btn" onclick="window.location.href='admin_approvefeedback.html'">Feebacks</button>
+                <button class="btn" onclick="window.location.href='admin_add.html'">Add Medicines | Operations | Tests</button>
+                <button class="btn"  style="background-color: white;"onclick="window.location.href='admin_check.html'">Check Medicines | Operations | Tests</button>
+            </div>
+        </div>
+        <div class="split right">
+            <div class="card">
+                <div class="leftcard">
+                    <div class="dateissue">
+                        <p>25 October<br>2022</p>
+                    </div>
+                </div>
+                <div class="midcard">
+                   <div>
+                       <p>Operation id: 1203403</p>
+                   </div>
+                   <div>
+                       <p>Total cost: $10</p>
+                   </div>
+                   <div>
+                       <p>Discount cost: $9</p>
+                   </div>
+                   <div>
+                       <p id="datetext">Date to be paid off: 30 October, 2022</p>
+                   </div>
+               </div>
+                <div class="rightcard">
+                    <button onclick="fun('myModal5','buttn5','close5')"id="buttn5">
+                        Details
+                    </button>
+                </div>
+                <div class="adminpart">
+                    <input type="date" class=ddate>
+                    <button class="udpdate" onclick="changedate(this)">Update date to be paid</button>
+                    <button class="status" onclick="change(this)">Click to mark this as paid</button>
+                </div>
+                <div id="myModal5" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id="close5">&times;</span>
+                      <table class="tabb">
+                       <tr><th>Symptomps</th><th>Operation Name</th><th>Doctor who recommended</th><th>Cost</th></tr>
+                       <tr><td>Losing consciousness, dizzy</td><td>Blood test</td><td>Mr X</td><td>$10</td></tr>
+                     </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="leftcard">
+                    <div class="dateissue">
+                        <p>25 October<br>2022</p>
+                    </div>
+                </div>
+                <div class="midcard">
+                    <div>
+                        <p>Prescription id: 1203403</p>
+                    </div>
+                    <div>
+                        <p>Total cost: $10</p>
+                    </div>
+                    <div>
+                        <p>Discount cost: $9</p>
+                    </div>
+                    <div>
+                        <p>Date to be paid off: 30 October, 2022</p>
+                    </div>
+                </div>
+                <div class="rightcard">
+                    <button onclick="fun('myModal5','buttn5','close5')"id="buttn5">
+                        Details
+                    </button>
+                </div>
+                <div class="adminpart">
+                    <input type="date" class=ddate>
+                    <button class="udpdate" onclick="changedate(this)">Update date to be paid</button>
+                    <button class="status" onclick="change(this)">Click to mark this as paid</button>
+                </div>
+                <div id="myModal5" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id="close5">&times;</span>
+                      <table class="tabb">
+                        <tr><th>Medicine</th><th>Dosage</th><th>Cost</th></tr>
+                        <tr><td>Paracetamol 50 mg</td><td>1 time a day in morning for 1 week</td><td>$12</td></tr>
+                        <tr><td>Paracetamol 50 mg</td><td>1 time a day in morning for 1 week</td><td>$12</td></tr>
+                        <tr><td>Paracetamol 50 mg</td><td>1 time a day in morning for 1 week</td><td>$12</td></tr>
+                      </table>
+                    </div>
+                  
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="leftcard">
+                    <div class="dateissue">
+                        <p>25 October<br>2022</p>
+                    </div>
+                </div>
+                <div class="midcard">
+                    <div>
+                        <p>Prescription id: 1203403</p>
+                    </div>
+                    <div>
+                        <p>Total cost: $10</p>
+                    </div>
+                    <div>
+                        <p>Discount cost: $9</p>
+                    </div>
+                    <div>
+                        <p>Date to be paid off: 30 October, 2022</p>
+                    </div>
+                </div>
+                <div class="rightcard">
+                    <button onclick="fun('myModal5','buttn5','close5')"id="buttn5">
+                        Details
+                    </button>
+                </div>
+                <div class="adminpart">
+                    <input type="date" class=ddate>
+                    <button class="udpdate" onclick="changedate(this)">Update date to be paid</button>
+                    <button class="status" onclick="change(this)">Click to mark this as paid</button>
+                </div>
+                <div id="myModal5" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id="close5">&times;</span>
+                      <table class="tabb">
+                        <tr><th>Medicine</th><th>Dosage</th><th>Cost</th></tr>
+                        <tr><td>Paracetamol 50 mg</td><td>1 time a day in morning for 1 week</td><td>$12</td></tr>
+                        <tr><td>Paracetamol 50 mg</td><td>1 time a day in morning for 1 week</td><td>$12</td></tr>
+                        <tr><td>Paracetamol 50 mg</td><td>1 time a day in morning for 1 week</td><td>$12</td></tr>
+                      </table>
+                    </div>
+                  
+                </div>
+            </div>
+            <div class="card">
+                <div class="leftcard">
+                    <div class="dateissue">
+                        <p>25 October<br>2022</p>
+                    </div>
+                </div>
+                <div class="midcard">
+                   <div>
+                       <p>Test id: 1203403</p>
+                   </div>
+                   <div>
+                       <p>Total cost: $10</p>
+                   </div>
+                   <div>
+                       <p>Discount cost: $9</p>
+                   </div>
+                   <div>
+                       <p>Date to be paid off: 30 October, 2022</p>
+                   </div>
+               </div>
+                <div class="rightcard">
+                    <button onclick="fun('myModal5','buttn5','close5')"id="buttn5">
+                        Details
+                    </button>
+                </div>
+                <div class="adminpart">
+                    <input type="date" class=ddate>
+                    <button class="udpdate" onclick="changedate(this)">Update date to be paid</button>
+                    <button class="status" onclick="change(this)">Click to mark this as paid</button>
+                </div>
+                <div id="myModal5" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span id="close5">&times;</span>
+                      <table class="tabb">
+                       <tr><th>Symptomps</th><th>Test Name</th><th>Doctor who recommended</th><th>Cost</th></tr>
+                       <tr><td>Losing consciousness, dizzy</td><td>Blood test</td><td>Mr X</td><td>$10</td></tr>
+                       
+                     </table>
+                    </div>
+                  
+                </div>
+            </div>
+
+        </div>
+        <script src="js\modal.js"></script>
+    </body>
+</html>
