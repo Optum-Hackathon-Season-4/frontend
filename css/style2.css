@@ -3,7 +3,7 @@ html{
     width: 100%;
 }
 body{
-    background-image: url(E:/offcampus/stratethon/other/login.png);
+    background-image: url('../other/login.png');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -88,7 +88,7 @@ body::before{
     
 }
 
-#uname,#password,#birthday,#martialstat,#race,#gender,#address,#income,#contact{
+#uname,#password,#birthday,#martialstat,#race,#gender,#address,#income,#contact,#user{
     padding-top: 5%;
     font-size: 15px;
     width: 90%;

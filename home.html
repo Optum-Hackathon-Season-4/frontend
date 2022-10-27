@@ -39,35 +39,80 @@ where to put search for doctors ?? -->
                 <div class="cardhead">
                     <img src="other\avatar.png" style="width: 15%; height:20%; padding:25px ; padding-left: 60px;background-size:cover;border-radius: 150px;">
                     <div class="about">
-                       <p><b>Name_of_the_person</b><br>age<br>mobile_no.</p>
+                       <p id="name"><b>Name: </b><br>Date of Birth: <br>Contact No.</p>
                     </div>
                 </div>
                 <div class="divider"></div>
                 <div class="cardabout">
                     <div class="leftabout">
-                        <div><p>
-                            <b>Martial Status</b><br>martial_stat
+                        <div><p id="marital">
+                            <b>Martial Status: </b><br>martial_stat
                         </p></div>
-                        <div><p>
-                            <b>Race</b><br>race
-                        </p></div>
-                        <div><p>
-                            <b>Gender</b><br>gender
+                      
+                        <div><p id="gender">
+                            <b>Gender: </b><br>gender
                         </p></div>
                     </div>
                     <div class="rightabout">
-                        <div><p>
-                            <b>Address</b><br>address
+                        <div><p id="address">
+                            <b>Address: </b><br>address
                         </p></div>
-                        <div><p>
-                            <b>Annual Income</b><br>annual_income
-                        </p></div>
-                        <div>
-                            <button class="detailchange">change details</button>
-                        </div>
+                        
+                        
                     </div>
                 </div>
+
+                <table>
+                    <tr>
+                      <th>S No.</th>
+                      <th>Allergy</th>
+                      <th>Symptoms</th>
+                    </tr>
+                    <tr>
+                      <td>1.</td>
+                      <td>asdsadasd</td>
+                      <td>asdasdasdasd</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>asdsadasd</td>
+                        <td>asdasdasdasd</td>
+                      </tr>
+                  
+                  </table>
+                  <div>
+                    <button class="detailchange">Add Allergies</button>
+                </div>
             </div>
+            <h2 id="message" style="padding-left: 20%; color: red;"></h2>
+
         </div>
+        <script>
+                var myHeaders = new Headers();
+    myHeaders.append("Authorization", `Token ${localStorage.getItem('token')}`);
+
+    var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow'
+    };
+
+fetch("http://localhost:8000/specificpatientview/", requestOptions)
+  .then(response => response.text())
+  .then((result) =>{
+    let data = JSON.parse(result)
+    document.getElementById("name").innerHTML = `<b>Name : ${data.name} </b><br>Date of Birth: ${data.birth_date}<br>Contact No. ${data.phone_number}</b>`
+    document.getElementById("marital").innerHTML = `<b>Martial Status</b> : ${data.marital_status}`
+    document.getElementById("address").innerHTML = `<b>Address</b> : ${data.address}`
+    document.getElementById("gender").innerHTML = `<b>Gender</b> : ${data.gender}`
+
+
+})
+  .catch((error) => {
+    console.log(error)
+    document.getElementById("message").innerHTML ="There was some error in getting the details"
+  });
+        </script>
+
     </body>
 </html>

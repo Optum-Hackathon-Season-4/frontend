@@ -16,10 +16,12 @@
                 <div style="font-family:'Dancing Script', cursive; text-align: center;padding-top:60px;padding-left: 10px; font-weight: bold; font-size: 30px; color: black;">Connecto</div>
                 <div class="container" style="position:absolute; padding:25px;">
                     <form action="home.html">
-                        <input type="text" id="username" name="uname" placeholder="Enter your name..">
+                        <input type="text" id="username" name="uname" placeholder="Enter your Username..">
                         <input type="password" id="pass" name="pass" placeholder="Enter your password..">
-                        <input type="submit" id="submitsignin" value="SignIn">
+                        <input onclick="Login()" id="submitsignin" value="SignIn">
                     </form>
+                    <h2 id="message1" style="color: red;"></h2>
+
                 </div>
             </div>
             <div class="registercard"> 
@@ -27,20 +29,12 @@
                 <div class="container" style="position:absolute; padding:40px;">
                     <form action="home.html">
                         <input type="text" id="uname" name="uname" placeholder="Enter your name..">
-                        <input type="date" id="birthday" name="bday" placeholder="Enther your birthday">
+                        <input type="text" id="user" name="user" placeholder="Enter your username..">
+                        <input type="date" id="birthday" name="bday" placeholder="Enter your birthday">
                         <select id="martialstat" name="martialstatus" >
                             <option value="" disabled selected hidden >Select your martial status</option>
                             <option value="Married">Married</option>
-                            <option value="Single">Single</option>
-                            <option value="Divorced">Divorced</option>
-                        </select>
-                        <select id="race" name="race">
-                            <option value="" disabled selected hidden >Select your race</option>
-                            <option value="Asian">Asian</option>
-                            <option value="White">White</option>
-                            <option value="Black or African American">Black or African American</option>
-                            <option value="American Indian">American Indian</option>
-                            <option value="Native Hawaiian or Other Pacific Island">Native Hawaiian or Other Pacific Island</option>
+                            <option value="Not Married">Not Married</option>
                         </select>
                         <select id="gender" name="gender">
                             <option value="" disabled selected hidden >Select your gender</option>
@@ -49,11 +43,12 @@
                         </select>
                         <input type="text" id="address" name="address" placeholder="Enter your address..">
                         <input type="text" id="contact" name="contact" placeholder="Enter your contact number..">
-                        <input type="text" id="income" name="income" placeholder="Enter your annual income..">
                         <input type="password" id="password" name="pass" placeholder="Enter your password..">
                         <input type="checkbox" onclick="myFunction()"  >
-                        <input type="submit" id="submitsignup" value="SignUp">
+                        <input onclick="submitDetails()" id="submitsignup" value="SignUp">
                     </form>
+                    <br/><br/>
+                    <h2 id="message" style="color: red;"></h2>
                 </div>
             </div>
         </div>

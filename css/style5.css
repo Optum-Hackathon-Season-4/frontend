@@ -110,9 +110,10 @@ html,body{
     border: none;
     border-radius: 20px;
     background-color: plum;
-    font-size: 25px;
+    font-size: 15px;
     padding: 10px;
     cursor:pointer;
+    margin-top: 20px;
  }
 
  .divider{
@@ -120,3 +121,20 @@ html,body{
     background-color: rgb(219, 198, 238);
     margin: 10px;
  }
+
+
+ table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
