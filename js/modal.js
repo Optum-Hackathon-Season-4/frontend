@@ -14,4 +14,23 @@ function fun(modalid,buttonid,closeid){
 }
 
 
+function change(button){
+    console.log(button.textContent);
+    if(button.textContent=="Click to mark this as paid"){
+        button.textContent="This has been paid";
+    }
+}
 
+
+
+ function changedate(button){
+//     console.log(button.value);
+//     console.log(button.previousElementSibling.value);
+//     console.log(button.parentElement);
+//     console.log(button.parentElement.previousElementSibling.previousElementSibling.lastElementChild.firstElementChild.textContent);
+    var store=button.previousElementSibling.value;
+    // console.log(store);
+    // console.log(typeof store);
+    // console.log(`date to be paid off: ${store}`);
+    button.parentElement.previousElementSibling.previousElementSibling.lastElementChild.firstElementChild.textContent=`Date to be paid off: ${(store)}`;
+}
