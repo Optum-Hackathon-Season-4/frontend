@@ -61,6 +61,47 @@ fetch("http://localhost:8000/login/", requestOptions)
 }
 
 
+function login1(){
+  let username = document.getElementById("username").value
+  let password = document.getElementById("pass").value
+
+  if(username == "" || password == ""){
+    document.getElementById("message1").innerHTML = "Details Missing"
+  }else{
+    var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+var raw = JSON.stringify({
+  "username": username,
+  "password": password
+});
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("http://localhost:8000/login/", requestOptions)
+  .then(response => response.text())
+  .then((result)=>{
+    let data = JSON.parse(result)
+    localStorage.clear()
+    localStorage.setItem('token',data.token)
+    localStorage.setItem('admin',true)
+    window.location.replace("admin_add.html")
+  })
+  .catch((error)=>{
+    console.log(error)
+    document.getElementById("message1").innerHTML = "Login Failed"
+
+  });
+  }
+
+}
+
+
 
 
 

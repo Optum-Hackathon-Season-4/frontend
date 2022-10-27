@@ -21,15 +21,59 @@
             <div class="header">Add another Hospital</div>
             <div class="card">
                 <form class="cardform"action="#">
-                    <input type="text" class="box" placeholder="Enter hospital name..">
-                    <input type="text" class="box" placeholder="Enter specialization of hospital..">
-                    <input type="text" class="box" placeholder="Enter capacity of hospital..">
-                    <input type="text" class="box" placeholder="Enter address of hospital">
-                    <input type="text" class="box" placeholder="Enter hopital id">
-                    <input type="text" class="box" placeholder="Enter passkey for hospital doctors">
-                    <button type="submit" class="submitbox" >Submit</button>
+                    <input type="text" id="name" class="box" placeholder="Enter hospital name..">
+                    <input type="text" id="specialization" class="box" placeholder="Enter specialization of hospital..">
+                    <input type="text" id="address" class="box" placeholder="Enter address of hospital">
+                    <input type="text" id="number" class="box" placeholder="Phone Number">
+                    <button onclick="submitDetails()" class="submitbox" >Submit</button>
                 </form>
             </div>
+        <h2 id="error" style="margin-left: 200px; color: red;"></h2>
         </div>
+        
+        <script>
+            function submitDetails(){
+                let name = document.getElementById("name").value
+                let specialization = document.getElementById("specialization").value
+                let address = document.getElementById("address").value
+                let number = document.getElementById("number").value 
+
+                if(name == "" || specialization == "" || address == "" || number == "")
+                document.getElementById("error").innerHTML = "Fields Missing!!"
+                else{
+                    var myHeaders = new Headers();
+                myHeaders.append("Authorization", `Token ${localStorage.getItem('token')}`);
+                myHeaders.append("Content-Type", "application/json");
+
+                var raw = JSON.stringify({
+                "name": name,
+                "specialization": specialization,
+                "address": address,
+                "phone_number": number
+                });
+
+                var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+                };
+
+                fetch("http://localhost:8000/hospitaldatabaseview/", requestOptions)
+                .then(response => response.text())
+                .then((result) => {
+                    document.getElementById("error").innerHTML = "Hospital Added Successfully!!"
+                })
+                .catch((error) => {
+                    document.getElementById("error").innerHTML = "There was some error"
+
+                });
+
+                }
+
+
+            }
+
+        </script>
     </body>
 </html>
