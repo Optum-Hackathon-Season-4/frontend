@@ -92,23 +92,50 @@ html,body{
     margin-right:auto ;
     margin-bottom:5% ;
     width: 80%;
-
     background-color: white;
     border-radius: 20px;
     min-height: 400px;
 }
 
 .topdet{
-    height: 30%;
+    height: 20%;
     width: 100%;
     background-color:  rgb(246, 224, 191);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 .botdet{
-    height: 70%;
+    height: 55%;
     display: flex;
 }
+.decision{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    background-color: beige;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin: auto;
+}
+.det{
+    width: 70%;
+    margin: auto;
+    padding-top: 5px;
+    padding-left: 5%;
+}
+.buttonnlp{
+    width: auto;
+    margin-top:20%;
+    margin-right:20%;
+    border: none;
+    background-color: cornflowerblue;
+    font-weight: bold;
+    color: white;
+    border-radius: 20px;
+    padding: 5%;
+    cursor: pointer;
+}
+
 .txt{
     padding: 5%;
     margin:0%;
@@ -119,83 +146,36 @@ html,body{
     width: 50%;
     display: flex;
     flex-direction: column;
-    padding-bottom: 2%;
  }
 
- .treatment_rating,.collaboration_rating,.communication_rating,.availability,.commentfordoctor{
+ .treatment_rating,.collaboration_rating,.communication_rating,.availability{
     display: flex;
     margin: auto;
  }
 
-
- .rating {
-    display: inline-block;
-    position: relative;
-    height: 20px;
-    line-height: 50px;
-    font-size: 20px;
-    width: 100%;
-  }
-  
-  .rating label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
+ .commentfordoctor{
+    display: flex;
+    margin: auto;
+ }
+ .buttoncomment{
+    width: auto;
+    margin-right:20%;
+    border: none;
+    background-color: cornflowerblue;
+    font-weight: bold;
+    color: white;
+    border-radius: 20px;
+    padding: 5%;
     cursor: pointer;
-  }
+ }
+.icon{
+    font-size: 20px;
+}
+.iconselected{
+    font-size: 20px;
+    color: rgb(129, 129, 238);
+}
   
-  .rating label:last-child {
-    position: static;
-  }
-  
-  .rating label:nth-child(1) {
-    z-index: 5;
-  }
-  
-  .rating label:nth-child(2) {
-    z-index: 4;
-  }
-  
-  .rating label:nth-child(3) {
-    z-index: 3;
-  }
-  
-  .rating label:nth-child(4) {
-    z-index: 2;
-  }
-  
-  .rating label:nth-child(5) {
-    z-index: 1;
-  }
-  
-  .rating label input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-  }
-  
-  .rating label .icon {
-    float: left;
-    color: transparent;
-    height: 10px;
-  }
-  
-  .rating label:last-child .icon {
-    color: #000;
-  }
-  
-  .rating:not(:hover) label input:checked ~ .icon,
-  .rating:hover label:hover input ~ .icon {
-    color: #09f;
-  }
-  
-  .rating label input:focus:not(:checked) ~ .icon:last-child {
-    color: #000;
-    text-shadow: 0 0 5px #09f;
-  }
-
   textarea{
     margin-left:10% ;
     box-sizing: border-box;
@@ -208,13 +188,12 @@ html,body{
   }
   .labelss{
     width: 70%;
-    padding-bottom: 5%;
+    padding-bottom: 6%;
   }
-
   .lab{
     background-color:  rgb(217, 212, 244);
-    margin: 8%;
-    border-radius: 20px;
+    margin: 4%;
+    border-radius: 5px;
     padding: 3%;
     font-size: 80%;
   }

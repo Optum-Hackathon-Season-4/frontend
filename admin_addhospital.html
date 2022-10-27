@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add hospital</title>
+        <link rel="stylesheet" href="css\style14.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="split left">
+            <div class="userimg" >
+                <img src="other/avatar.png" style="width: 45%; height:60% ;padding: 15px; background-size: cover; border-radius: 110px;">
+            </div>
+            <div class="navbar">
+                <button class="btn" style="background-color: white;" onclick="window.location.href='admin_addhospital.html'">Add Hospital</button>
+                <button class="btn" onclick="window.location.href='admin_approvefeedback.html'">Feebacks</button>
+                <button class="btn" onclick="window.location.href='admin_medicine.html'">Medicines</button>
+                <button class="btn" onclick="window.location.href='admin_operation.html'">Operations</button>
+                <button class="btn" onclick="window.location.href='admin_testing.html'">Tests</button>
+            </div>
+        </div>
+        <div class="split right">
+            <div class="header">Add another Hospital</div>
+            <div class="card">
+                <form class="cardform"action="#">
+                    <input type="text" class="box" placeholder="Enter hospital name..">
+                    <input type="text" class="box" placeholder="Enter specialization of hospital..">
+                    <input type="text" class="box" placeholder="Enter capacity of hospital..">
+                    <input type="text" class="box" placeholder="Enter address of hospital">
+                    <input type="text" class="box" placeholder="Enter hopital id">
+                    <input type="text" class="box" placeholder="Enter passkey for hospital doctors">
+                    <button type="submit" class="submitbox" >Submit</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
