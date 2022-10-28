@@ -47,7 +47,7 @@ function Login(){
       .then((result)=>{
         let data = JSON.parse(result)
         localStorage.clear()
-        localStorage.setItem('token',data.token)
+        localStorage.setItem('token',JSON.stringify(data.token))
         localStorage.setItem('patient',true)
         window.location.replace("home.html")
       })
@@ -206,11 +206,11 @@ function submitDetailsdoctor(){
   let name = document.getElementById("uname").value
   let gender = document.getElementById("gender").value
   let birthdate = document.getElementById("birthday").value
-  let hospital = document.getElementById("hospital").value
+  let passkey = document.getElementById("passkey").value
   let specialization = document.getElementById("specialization").value
   let phone = document.getElementById("phone").value
   let password = document.getElementById("password").value
-  if(name == "" || hospital == "" || birthdate == "" || phone == "" || gender  == "" || specialization == "" || password == ""){
+  if(name == "" || passkey == "" || birthdate == "" || phone == "" || gender  == "" || specialization == "" || password == ""){
     document.getElementById("message").innerHTML = "Please Check if all Details are Valid"
   }else{
     var myHeaders = new Headers();
@@ -223,7 +223,7 @@ function submitDetailsdoctor(){
       "name": name,
       "gender": gender,
       "specialization": specialization,
-      "passkey": "connectodb",
+      "passkey": passkey,
       "phone_number": phone
     });
 

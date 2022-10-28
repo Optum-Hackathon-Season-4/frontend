@@ -1,13 +1,12 @@
 var myHeaders = new Headers();
 myHeaders.append("Authorization", `Token ${JSON.parse(localStorage.getItem('token'))}`);
-
 var requestOptions = {
   method: 'GET',
   headers: myHeaders,
   redirect: 'follow'
 };
 
-fetch("http://localhost:8000/prescriptions/", requestOptions)
+fetch("http://localhost:8000/medicaltests/", requestOptions)
   .then((response) => response.text())
   .then((result) => {
     let data = JSON.parse(result)
@@ -24,19 +23,13 @@ fetch("http://localhost:8000/prescriptions/", requestOptions)
             </div>
             <div class="midcard">
                 <div>
-                    <p>Prescription id: ${elem.id}</p>
+                    <p>Test id: ${elem.id}</p>
                 </div>
                 <div>
                     <p>Date to be paid off: ${elem.payment_deadline === null?'N/A' : elem.payment_deadline}</p>
                 </div>
                 <div>
-                    <p>Symptomps : ${elem.symptoms}</p>
-                </div>
-                <div>
-                    <p>Follow Up : ${elem.follow_up}</p>
-                </div>
-                <div>
-                    <p>No. of Days : ${elem.days}</p>
+                    <p>Doctor id : ${elem.doctor}</p>
                 </div>
             </div>
             <div class="rightcard">
@@ -57,13 +50,13 @@ fetch("http://localhost:8000/prescriptions/", requestOptions)
             </div>
         `
         console.log(e1);
-        let meds=elem.medicines;
+        let meds=elem.tests;
         let putt=`
-        <tr><th>Medicine</th><th>Dosage</th><th>Cost</th></tr>`;
+        <tr><th>Tests</th><th>Recommendation</th><th>Cost</th></tr>`;
         meds.forEach((med)=>{
             let str=`<tr>`;
             str+=`<th>${med.name}</th>`;
-            str+=`<th>${med.time_to_taken}</th>`;
+            str+=`<th>${med.recommendation}</th>`;
             str+=`<th>${med.cost}</th>`
             str+=`</tr>`
             putt+=str;
@@ -80,7 +73,6 @@ fetch("http://localhost:8000/prescriptions/", requestOptions)
   .catch((error) => {
     console.log(error)
   });
-
 
 function fun(modalid,buttonid,closeid){
     var modal = document.getElementById(modalid);

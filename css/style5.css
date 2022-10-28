@@ -82,6 +82,7 @@ html,body{
 .cardhead{
     border-radius:30px ;
     display: flex;
+    height: 30%;
     background-color: white;
 }
 .profilecard{
@@ -92,7 +93,7 @@ html,body{
     border-radius: 30px;
  }
  .about{
-    font-size: 25px;
+    font-size: 20px;
     justify-content: center;
     align-items: center;
     padding: 5%;
@@ -103,9 +104,9 @@ html,body{
     display: flex;
     padding-left: 10%;
     padding-right: 30%;
+    padding-bottom:1% ;
     justify-content: space-between;
  }
-
  .detailchange{
     border: none;
     border-radius: 20px;
@@ -113,7 +114,6 @@ html,body{
     font-size: 15px;
     padding: 10px;
     cursor:pointer;
-    margin-top: 20px;
  }
 
  .divider{
@@ -138,3 +138,4 @@ html,body{
   tr:nth-child(even) {
     background-color: #dddddd;
   }
+
