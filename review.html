@@ -16,15 +16,14 @@
                 <button class="btn" onclick="window.location.href='prescription.html'">Past Prescriptions</button>
                 <button class="btn" onclick="window.location.href='testing.html'">Past testing</button>
                 <button class="btn" onclick="window.location.href='operation.html'">Past operations</button>
-                <button class="btn" onclick="window.location.href='doctor.html'">Past Doctors</button>
                 <button class="btn" style="background-color: white;"onclick="window.location.href='review.html'">Past reviews</button>
                 <button class="btn" onclick="window.location.href='find_doctor.html'">Find a new doctor</button>
                 <button class="btn" onclick="window.location.href='rate.html'">Rate it</button>
                 <button class="btn" onclick="window.location.href='recommenddoctor.html'">Recommend doctor</button>
             </div>
         </div>
-        <div class="split right">
-            <div class="doctor_card">
+        <div class="split right" id="addreview">
+            <!-- <div class="doctor_card">
                 <div class="leftcard">
                     <div class="pic">
                        <img src="other/avatar.png" style="width:80%; padding-left:20% ;">
@@ -50,128 +49,240 @@
                 </div>
                 <div class="rightcard">
                     <div class="review">This is the user review. blah blah blah. the doctor was nice. nice prescription. allover good. blah blah blah blah blah blah blah blah blah blah balh blah blah blah blah blah blah</div>
-                    <div class="userrating">
-                        <span class="fa fa-star checked" style="font-size:20px ;"></span>
-                        <span class="fa fa-star checked" style="font-size:20px ;"></span>
-                        <span class="fa fa-star checked" style="font-size: 20px;"></span>
-                        <span class="fa fa-star" style="font-size:20px ;"></span>
-                        <span class="fa fa-star" style="font-size:20px ;"></span>
+                    <div class="allratings">
+                        <div class="leftrate">
+                            <div class="userrating">
+                                <span class="fa fa-star checked" style="font-size:20px ;"></span>
+                                <span class="fa fa-star checked" style="font-size:20px ;"></span>
+                                <span class="fa fa-star checked" style="font-size: 20px;"></span>
+                                <span class="fa fa-star" style="font-size:20px ;"></span>
+                                <span class="fa fa-star" style="font-size:20px ;"></span>
+                            </div>
+                            <div class="userrating">
+                                <span class="fa fa-star checked" style="font-size:20px ;"></span>
+                                <span class="fa fa-star checked" style="font-size:20px ;"></span>
+                                <span class="fa fa-star checked" style="font-size: 20px;"></span>
+                                <span class="fa fa-star" style="font-size:20px ;"></span>
+                                <span class="fa fa-star" style="font-size:20px ;"></span>
+                            </div>
+                        </div>
+                        <div class="rightrate">
+                            <div class="userrating">
+                                <span class="fa fa-star checked" style="font-size:20px ;"></span>
+                                <span class="fa fa-star checked" style="font-size:20px ;"></span>
+                                <span class="fa fa-star checked" style="font-size: 20px;"></span>
+                                <span class="fa fa-star" style="font-size:20px ;"></span>
+                                <span class="fa fa-star" style="font-size:20px ;"></span>
+                            </div>
+                            <div class="userrating">
+                                <span class="fa fa-star checked" style="font-size:20px ;"></span>
+                                <span class="fa fa-star checked" style="font-size:20px ;"></span>
+                                <span class="fa fa-star checked" style="font-size: 20px;"></span>
+                                <span class="fa fa-star" style="font-size:20px ;"></span>
+                                <span class="fa fa-star" style="font-size:20px ;"></span>
+                            </div>
+                        </div>
                     </div>
+                    
                 </div>
-            </div>
-
-
-            <div class="doctor_card">
-                <div class="leftcard">
-                    <div class="pic">
-                       <img src="other/avatar.png" style="width:80%; padding-left:20% ;">
-                    </div>
-                    <div class="stars">
-                        <span class="fa fa-star checked" style="font-size:20px ;"></span>
-                        <span class="fa fa-star checked" style="font-size:20px ;"></span>
-                        <span class="fa fa-star checked" style="font-size: 20px;"></span>
-                        <span class="fa fa-star" style="font-size:20px ;"></span>
-                        <span class="fa fa-star" style="font-size:20px ;"></span>
-                    </div>
-                    <div>
-                        <button class="bookbtn">Book appointment</button>
-                    </div>
-                </div>
-                <div class="details">
-                    <div>Name</div>
-                    <div>Age</div>
-                    <div>Gender</div>
-                    <div>Hospital</div>
-                    <div>Specialization</div>
-                    <div>charges</div>
-                </div>
-                <div class="rightcard">
-                    <div class="review">This is the user review. blah blah blah. the doctor was nice. nice prescription. allover good. blah blah blah blah blah blah blah blah blah blah balh blah blah blah blah blah blah</div>
-                    <div class="userrating">
-                        <span class="fa fa-star checked" style="font-size:20px ;"></span>
-                        <span class="fa fa-star checked" style="font-size:20px ;"></span>
-                        <span class="fa fa-star checked" style="font-size: 20px;"></span>
-                        <span class="fa fa-star" style="font-size:20px ;"></span>
-                        <span class="fa fa-star" style="font-size:20px ;"></span>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="doctor_card">
-                <div class="leftcard">
-                    <div class="pic">
-                       <img src="other/avatar.png" style="width:80%; padding-left:20% ;">
-                    </div>
-                    <div class="stars">
-                        <span class="fa fa-star checked" style="font-size:20px ;"></span>
-                        <span class="fa fa-star checked" style="font-size:20px ;"></span>
-                        <span class="fa fa-star checked" style="font-size: 20px;"></span>
-                        <span class="fa fa-star" style="font-size:20px ;"></span>
-                        <span class="fa fa-star" style="font-size:20px ;"></span>
-                    </div>
-                    <div>
-                        <button class="bookbtn">Book appointment</button>
-                    </div>
-                </div>
-                <div class="details">
-                    <div>Name</div>
-                    <div>Age</div>
-                    <div>Gender</div>
-                    <div>Hospital</div>
-                    <div>Specialization</div>
-                    <div>charges</div>
-                </div>
-                <div class="rightcard">
-                    <div class="review">This is the user review. blah blah blah. the doctor was nice. nice prescription. allover good. blah blah blah blah blah blah blah blah blah blah balh blah blah blah blah blah blah</div>
-                    <div class="userrating">
-                        <span class="fa fa-star checked" style="font-size:20px ;"></span>
-                        <span class="fa fa-star checked" style="font-size:20px ;"></span>
-                        <span class="fa fa-star checked" style="font-size: 20px;"></span>
-                        <span class="fa fa-star" style="font-size:20px ;"></span>
-                        <span class="fa fa-star" style="font-size:20px ;"></span>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="doctor_card">
-                <div class="leftcard">
-                    <div class="pic">
-                       <img src="other/avatar.png" style="width:80%; padding-left:20% ;">
-                    </div>
-                    <div class="stars">
-                        <span class="fa fa-star checked" style="font-size:20px ;"></span>
-                        <span class="fa fa-star checked" style="font-size:20px ;"></span>
-                        <span class="fa fa-star checked" style="font-size: 20px;"></span>
-                        <span class="fa fa-star" style="font-size:20px ;"></span>
-                        <span class="fa fa-star" style="font-size:20px ;"></span>
-                    </div>
-                    <div>
-                        <button class="bookbtn">Book appointment</button>
-                    </div>
-                </div>
-                <div class="details">
-                    <div>Name</div>
-                    <div>Age</div>
-                    <div>Gender</div>
-                    <div>Hospital</div>
-                    <div>Specialization</div>
-                    <div>charges</div>
-                </div>
-                <div class="rightcard">
-                    <div class="review">This is the user review. blah blah blah. the doctor was nice. nice prescription. allover good. blah blah blah blah blah blah blah blah blah blah balh blah blah blah blah blah blah</div>
-                    <div class="userrating">
-                        <span class="fa fa-star checked" style="font-size:20px ;"></span>
-                        <span class="fa fa-star checked" style="font-size:20px ;"></span>
-                        <span class="fa fa-star checked" style="font-size: 20px;"></span>
-                        <span class="fa fa-star" style="font-size:20px ;"></span>
-                        <span class="fa fa-star" style="font-size:20px ;"></span>
-                    </div>
-                </div>
-            </div>
+            </div> -->
 
 
         </div>
+        <script>
+            //Now iterate on all the feedbacks in the database 
+            //which ever feedback is given by this patient?? what is his id lololol uhm
+            //ok we need to recover it from login api's object
+            //so whichever feedback given by this id and approved go ahead
+            //iterate on all the doctors first 
+            //first find id of looged in person
+            let pid;
+               var myHeaderscur = new Headers();
+                console.log(JSON.parse(localStorage.getItem('token')));
+                myHeaderscur.append("Authorization", `Token ${JSON.parse(localStorage.getItem('token'))}`);
+                var requestOptions = {
+                    method: 'GET',
+                    headers: myHeaderscur,
+                    redirect: 'follow'
+                };
+
+                fetch("http://localhost:8000/specificpatientview/", requestOptions)
+                .then(response => response.text())
+                .then((result) =>{
+                    let data = JSON.parse(result)
+                    console.log(data);
+                    pid=data.id;
+
+                })
+                    .catch((error) => {
+                        console.log(error)
+                        document.getElementById("message").innerHTML ="There was some error in getting the details"
+                    });
+
+
+            //finding compatible feedback
+            let imgsrc='other\\avatar.png';
+            var myHeaders = new Headers();
+        //    myHeaders.append("Authorization", `Token ${JSON.parse(localStorage.getItem('token'))}`);
+            var requestOptions = {
+                method: 'GET',
+                headers: myHeaders,
+                redirect: 'follow'
+            };
+            fetch("http://localhost:8000/doctor/", requestOptions)
+            .then((response) => response.text())
+            .then((result) => {
+                let data = JSON.parse(result)
+                console.log(data);
+                data.forEach((elem) => {
+                    console.log(elem);
+                    let docid=elem.id;
+                    //now fetch the feedback for this doctor
+                    var requestOptions = {
+                        method: 'GET',
+                        redirect: 'follow'
+                    };
+
+                    fetch(`http://localhost:8000/openfeedback/${docid}`, requestOptions)
+                    .then(response => response.text())
+                    .then((result2) => {
+                        let docfeeddata=JSON.parse(result2)
+                        console.log('feedback');
+                        console.log(docfeeddata);
+                        docfeeddata.forEach((feedback)=>{
+                            console.log(feedback)
+                            let curpatid=feedback.patient;
+                            console.log('patient who posted this is ')
+                            console.log(curpatid)
+                            if(curpatid==pid){
+                                console.log('this feeback matches this is the one')
+                                console.log(feedback)
+                                //now for this one insert inside the card
+                                // const e1 = document.createElement('div');
+                                let cnt=0;
+                                let rates=["","","","",""];
+                                let avg=(elem.availability_rating+elem.collaboration_rating+elem.communication_rating+elem.treatment_rating)/4;
+                                console.log(avg/2);
+                                avg=avg/2;
+                                for(i=1;i<=5;i++){
+                                    if(i<=avg){
+                                        rates[i-1]="checked";
+                                    }
+                                }
+                                let treatrate=["","","","",""];
+                                for(i=1;i<=5;i++){
+                                    if(i<=(feedback.treatment_rating)/2){
+                                        treatrate[i-1]="checked";
+                                    }
+                                }
+                                let collabrate=["","","","",""];
+                                for(i=1;i<=5;i++){
+                                    if(i<=(feedback.collaboration_rating)/2){
+                                        collabrate[i-1]="checked";
+                                    }
+                                }
+                                let comrate=["","","","",""];
+                                for(i=1;i<=5;i++){
+                                    if(i<=(feedback.communication_rating)/2){
+                                        comrate[i-1]="checked";
+                                    }
+                                }
+                                let avail=["","","","",""];
+                                for(i=1;i<=5;i++){
+                                    if(i<=(feedback.availability)/2){
+                                        avail[i-1]="checked";
+                                    }
+                                }
+                                const e1 = document.createElement('div');
+                                e1.innerHTML=`
+                                <div class="doctor_card">
+                                <div class="leftcard">
+                                    <div class="pic">
+                                    <img src=${imgsrc} style="width:80%; padding-left:20% ;">
+                                    </div>
+                                    <div class="stars">
+                                        <span class="fa fa-star ${rates[0]}" style="font-size:20px ;"></span>
+                                        <span class="fa fa-star ${rates[1]}" style="font-size:20px ;"></span>
+                                        <span class="fa fa-star ${rates[2]}" style="font-size: 20px;"></span>
+                                        <span class="fa fa-star ${rates[3]}" style="font-size:20px ;"></span>
+                                        <span class="fa fa-star ${rates[4]}" style="font-size:20px ;"></span>
+                                    </div>
+                                    <div>
+                                        <button class="bookbtn">Book appointment</button>
+                                    </div>
+                                </div>
+                                <div class="details">
+                                    <div>${elem.name}</div>
+                                    <div>${elem.age}</div>
+                                    <div>${elem.gender}</div>
+                                    <div>${elem.hospital.name}</div>
+                                    <div>${elem.specialization}</div>
+                                    <div>${elem.consultation_charges}</div>
+                                </div>
+                                <div class="rightcard">
+                                    <div class="review">${feedback.reviews}</div>
+                                    <div class="allratings">
+                                        <div class="leftrate">
+                                            <div class="userrating">
+                                                <span class="fa fa-star ${treatrate[0]}" style="font-size:20px ;"></span>
+                                                <span class="fa fa-star ${treatrate[1]}" style="font-size:20px ;"></span>
+                                                <span class="fa fa-star ${treatrate[2]}" style="font-size: 20px;"></span>
+                                                <span class="fa fa-star ${treatrate[3]}" style="font-size:20px ;"></span>
+                                                <span class="fa fa-star ${treatrate[4]}" style="font-size:20px ;"></span>
+                                            </div>
+                                            <div class="userrating">
+                                                <span class="fa fa-star ${collabrate[0]}" style="font-size:20px ;"></span>
+                                                <span class="fa fa-star ${collabrate[1]}" style="font-size:20px ;"></span>
+                                                <span class="fa fa-star ${collabrate[2]}" style="font-size: 20px;"></span>
+                                                <span class="fa fa-star ${collabrate[3]}" style="font-size:20px ;"></span>
+                                                <span class="fa fa-star ${collabrate[4]}" style="font-size:20px ;"></span>
+                                            </div>
+                                        </div>
+                                        <div class="rightrate">
+                                            <div class="userrating">
+                                                <span class="fa fa-star ${comrate[0]}" style="font-size:20px ;"></span>
+                                                <span class="fa fa-star ${comrate[1]}" style="font-size:20px ;"></span>
+                                                <span class="fa fa-star ${comrate[2]}" style="font-size: 20px;"></span>
+                                                <span class="fa fa-star ${comrate[3]}" style="font-size:20px ;"></span>
+                                                <span class="fa fa-star ${comrate[4]}" style="font-size:20px ;"></span>
+                                            </div>
+                                            <div class="userrating">
+                                                <span class="fa fa-star ${avail[0]}" style="font-size:20px ;"></span>
+                                                <span class="fa fa-star ${avail[1]}" style="font-size:20px ;"></span>
+                                                <span class="fa fa-star ${avail[2]}" style="font-size: 20px;"></span>
+                                                <span class="fa fa-star ${avail[3]}" style="font-size:20px ;"></span>
+                                                <span class="fa fa-star ${avail[4]}" style="font-size:20px ;"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                </div>
+                                `
+                                console.log(e1);
+                                document.getElementById("addreview").appendChild(e1);
+                                console.log(document.getElementById('addreview'));
+                                cnt+=1;
+                            }
+                            
+                        })
+                    })
+                    .catch((error) => {
+                        console.log(error)
+                    });
+                });
+               
+            })
+            .catch((error) => {
+                console.log(error)
+            });
+            console.log('coming out')
+            const e2=document.createElement('div');
+                e2.innerHTML=`<div style="position:relative;top:100% ;height: 30px"></div>`;
+                document.getElementById("addreview").appendChild(e2);
+                console.log('e2 element is')
+                console.log(e2);
+                console.log(document.getElementById("addreview"));
+        </script>
     </body>
 </html>
