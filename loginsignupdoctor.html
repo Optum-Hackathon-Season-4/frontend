@@ -18,7 +18,7 @@
                     <form action="home.html">
                         <input type="text" id="username" name="uname" placeholder="Enter your name..">
                         <input type="password" id="pass" name="pass" placeholder="Enter your password..">
-                        <input type="submit" id="submitsignin" value="SignIn">
+                        <input onclick="login3()" id="submitsignin" value="SignIn">
                     </form>
                 </div>
             </div>
@@ -33,22 +33,19 @@
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
                         </select>
-                        <select id="hospital" name="hospital" >
-                            <option value="" disabled selected hidden >Select your hospital</option>
-                            <option value="hos1">Hospital1</option>
-                            <option value="hos2">Hospital2</option>
-                            <option value="hos2">Hospital3</option>
-                        </select>
-                        <select id="specialization" name="race">
+                        <select id="specialization" name="specialization">
                             <option value="" disabled selected hidden >Select your specialization</option>
                             <option value="sp1">specialization1</option>
                             <option value="sp2">specialization2</option>
                         </select>
-                        <input type="text" id="charges" name="charges" placeholder="Enter your consultation charges..">
+                        <input type="text" id="phone" name="phone" placeholder="Enter your contact..">
+                        <input type="text" id="passkey" name="passkey" placeholder="Enter your passkey..">
                         <input type="password" id="password" name="pass" placeholder="Enter your password..">
                         <input type="checkbox" onclick="myFunction()"  >
-                        <input type="submit" id="submitsignup" value="SignUp">
+                        <input onclick="submitDetailsdoctor()" id="submitsignup" value="SignUp">
                     </form>
+                    <br/><br/>
+                    <h2 id="message" style="color: red;"></h2>
                 </div>
             </div>
         </div>

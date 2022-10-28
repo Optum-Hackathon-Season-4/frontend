@@ -28,34 +28,35 @@ function Login(){
     document.getElementById("message1").innerHTML = "Details Missing"
   }else{
     var myHeaders = new Headers();
-myHeaders.append("Content-Type", "application/json");
+    myHeaders.append("Content-Type", "application/json");
 
-var raw = JSON.stringify({
-  "username": username,
-  "password": password
-});
+    var raw = JSON.stringify({
+      "username": username,
+      "password": password
+    });
 
-var requestOptions = {
-  method: 'POST',
-  headers: myHeaders,
-  body: raw,
-  redirect: 'follow'
-};
+    var requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: raw,
+      redirect: 'follow'
+    };
 
-fetch("http://localhost:8000/login/", requestOptions)
-  .then(response => response.text())
-  .then((result)=>{
-    let data = JSON.parse(result)
-    localStorage.clear()
-    localStorage.setItem('token',data.token)
-    localStorage.setItem('patient',true)
-    window.location.replace("home.html")
-  })
-  .catch((error)=>{
-    console.log(error)
-    document.getElementById("message1").innerHTML = "Login Failed"
+    fetch("http://localhost:8000/login/", requestOptions)
+      .then(response => response.text())
+      .then((result)=>{
+        let data = JSON.parse(result)
+        localStorage.clear()
+        localStorage.setItem('token',JSON.stringify(data.token))
+        localStorage.setItem('patient',true)
+        window.location.replace("home.html")
+      })
+      .catch((error)=>{
+        console.log(error)
+        document.getElementById("message1").innerHTML = "Login Failed"
 
-  });
+      }
+    );
   }
 
 }
@@ -102,7 +103,46 @@ fetch("http://localhost:8000/login/", requestOptions)
 }
 
 
+function login3(){
+  
+  let username = document.getElementById("username").value
+  let password = document.getElementById("pass").value
+  
+  if(username == "" || password == ""){
+    document.getElementById("message1").innerHTML = "Details Missing"
+  }else{
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
 
+    var raw = JSON.stringify({
+      "username": username,
+      "password": password
+    });
+
+    var requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: raw,
+      redirect: 'follow'
+    };
+
+    fetch("http://localhost:8000/login/", requestOptions)
+      .then(response => response.text())
+      .then((result)=>{
+        let data = JSON.parse(result)
+        localStorage.clear()
+        localStorage.setItem('token',data.token)
+        localStorage.setItem('dcotor',true)
+        window.location.replace("doctor_home.html")
+      })
+      .catch((error)=>{
+        console.log(error)
+        document.getElementById("message1").innerHTML = "Login Failed"
+
+      }
+    );
+  }
+}
 
 
 
@@ -159,12 +199,51 @@ fetch("http://localhost:8000/signup/", requestOptions)
     document.getElementById("message").innerHTML = "There was some error please try later"
 
   });
+} 
 }
 
+function submitDetailsdoctor(){
+  let name = document.getElementById("uname").value
+  let gender = document.getElementById("gender").value
+  let birthdate = document.getElementById("birthday").value
+  let passkey = document.getElementById("passkey").value
+  let specialization = document.getElementById("specialization").value
+  let phone = document.getElementById("phone").value
+  let password = document.getElementById("password").value
+  if(name == "" || passkey == "" || birthdate == "" || phone == "" || gender  == "" || specialization == "" || password == ""){
+    document.getElementById("message").innerHTML = "Please Check if all Details are Valid"
+  }else{
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
 
+    var raw = JSON.stringify({
+      "password": password,
+      "username": name,
+      "is_doctor": true,
+      "name": name,
+      "gender": gender,
+      "specialization": specialization,
+      "passkey": passkey,
+      "phone_number": phone
+    });
 
-  
-  
+    var requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: raw,
+      redirect: 'follow'
+    };
 
-  
+    fetch("http://localhost:8000/signup/", requestOptions)
+      .then(response => response.text())
+      .then((result)=>{
+        document.getElementById("message").style = "color: green;"
+        document.getElementById("message").innerHTML = "User Succesfully Registered!!"
+    
+      })
+      .catch((error)=>{
+        document.getElementById("message").innerHTML = "There was some error please try later"
+    
+      });
+      }
 }

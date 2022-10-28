@@ -121,7 +121,7 @@ html,body{
 .dateissue{
     margin: auto;
 }
-#buttn1,#buttn2,#buttn3,#buttn4,#buttn5{
+#buttn1,#buttn2,#buttn3,#buttn4,#buttn5,#buttn0{
     height: 100%;
     margin: auto;
     justify-content: center;
@@ -132,7 +132,7 @@ html,body{
     cursor: pointer;
 }
 
-#buttn1:focus,#buttn2:focus,#buttn3:focus,#buttn4:focus,#buttn5:focus{
+#buttn1:focus,#buttn2:focus,#buttn3:focus,#buttn4:focus,#buttn5:focus,#buttn0:focus{
     height: 100%;
     margin: auto;
     justify-content: center;
@@ -170,7 +170,7 @@ html,body{
   }
   
   /* The Close Button */
-  #close1,#close2,#close3,#close4,#close5 {
+  #close1,#close2,#close3,#close4,#close5,#close0 {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
@@ -182,7 +182,7 @@ html,body{
   #close2:focus ,#close3:hover,
   #close3:focus ,#close4:hover,
   #close4:focus ,#close5:hover,
-  #close5:focus {
+  #close5:focus,#close0:hover,#close0:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;

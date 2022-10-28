@@ -88,7 +88,7 @@ body::before{
     
 }
 
-#uname,#password,#birthday,#hospital,#specialization,#gender,#charges{
+#uname,#password,#birthday,#passkey,#specialization,#gender,#charges,#phone{
     padding-top: 5%;
     font-size: 15px;
     width: 90%;
@@ -100,7 +100,7 @@ body::before{
     
 }
 
-#uname:focus,#password:focus,#birthday:focus,#hospital:focus,#specialization:focus,#gender:focus,#charges:focus{
+#uname:focus,#password:focus,#birthday:focus,#passkey:focus,#specialization:focus,#gender:focus,#charges:focus,#phone:focus{
     outline: None;
     border-bottom: 1px solid blue;
 }

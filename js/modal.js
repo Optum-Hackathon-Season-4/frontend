@@ -1,5 +1,5 @@
 var myHeaders = new Headers();
-myHeaders.append("Authorization", `Token ${localStorage.getItem('token')}`);
+myHeaders.append("Authorization", `Token ${JSON.parse(localStorage.getItem('token'))}`);
 
 var requestOptions = {
   method: 'GET',
@@ -11,9 +11,11 @@ fetch("http://localhost:8000/prescriptions/", requestOptions)
   .then((response) => response.text())
   .then((result) => {
     let data = JSON.parse(result)
+    console.log(data);
     data.forEach((elem) => {
-        const e1 = document.createElement(`
-        <div class="split right">
+        const e1 = document.createElement('div');
+        let cnt=0;
+        e1.innerHTML=`
         <div class="card">
             <div class="leftcard">
                 <div class="dateissue">
@@ -38,24 +40,41 @@ fetch("http://localhost:8000/prescriptions/", requestOptions)
                 </div>
             </div>
             <div class="rightcard">
-                <button onclick="fun('myModal1','buttn1','close1')"id="buttn1">
+                <button onclick="fun('myModal${cnt}','buttn${cnt}','close${cnt}')"id="buttn${cnt}">
                     Details
                 </button>
             </div>
-            <div id="myModal1" class="modal">
+            <div id="myModal${cnt}" class="modal">
                 <div class="modal-content">
-                  <span id="close1">&times;</span>
-                  <table class="tabb">
+                  <span id="close${cnt}">&times;</span>
+                  <table class="tabb" >
                     <tr><th>Medicine</th><th>Dosage</th><th>Cost</th></tr>
                     <tr><td>Paracetamol 50 mg</td><td>1 time a day in morning for 1 week</td><td>$12</td></tr>
                     <tr><td>Paracetamol 50 mg</td><td>1 time a day in morning for 1 week</td><td>$12</td></tr>
                     <tr><td>Paracetamol 50 mg</td><td>1 time a day in morning for 1 week</td><td>$12</td></tr>
                   </table>
                 </div>
-              
             </div>
-        </div>`)
-        document.getElementById("prescriptionlist").appendChild(e1)
+        `
+        console.log(e1);
+        let meds=elem.medicines;
+        let putt=`
+        <tr><th>Medicine</th><th>Dosage</th><th>Cost</th></tr>`;
+        meds.forEach((med)=>{
+            let str=`<tr>`;
+            str+=`<th>${med.name}</th>`;
+            str+=`<th>${med.time_to_taken}</th>`;
+            str+=`<th>${med.cost}</th>`
+            str+=`</tr>`
+            putt+=str;
+        })
+        console.log(e1.getElementsByClassName('tabb')[0].innerHTML);
+        console.log(putt);
+        e1.getElementsByClassName('tabb')[0].innerHTML=putt;
+        console.log(e1);
+        document.getElementById("prescriptionlist").appendChild(e1);
+        console.log(document.getElementById('prescriptionlist'));
+        cnt+=1;
     });
   })
   .catch((error) => {
