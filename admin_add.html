@@ -21,17 +21,59 @@
             <div class="header">Add another Medicine/Operation/Test</div>
             <div class="card">
                 <form class="cardform"action="#">
-                    <select class="box">
+                    <select class="box" id="type">
                         <option class="boxopt" value="" disabled selected hidden > Select type from below</option>
-                        <option class="boxopt" value="Medicine">Medicine</option>
-                        <option class="boxopt" value="Test">Test</option>
+                        <option class="boxopt" value="Medical Test">Medical Test</option>
+                        <option class="boxopt" value="Drug">Drug</option>
                         <option class="boxopt" value="Operation">Operation</option>
                     </select>
-                    <input type="text" class="box" placeholder="Enter name of test/medicine/operation">
-                    <input type="text" class="box" placeholder="Enter the cost">
-                    <button type="submit" class="submitbox" >Submit</button>
+                    <input type="text" id="name" class="box" placeholder="Enter name of test/medicine/operation">
+                    <input type="number" id="cost" class="box" placeholder="Enter the cost">
+                    <button onclick="submitService()" class="submitbox" >Submit</button>
                 </form>
+                <h2 id="error" style="color: red;"></h2>
+                <h2 id="message" style="color: green;"></h2>
+                
             </div>
         </div>
     </body>
+    <script>
+        function submitService(){
+            let type = document.getElementById("type").value 
+            let name = document.getElementById("name").value
+            let cost = document.getElementById("cost").value
+
+            if(type == "" || name == "" || cost == ""){
+                document.getElementById("error").innerHTML = "Missing Values !!!"
+            }else{
+                var myHeaders = new Headers();
+                myHeaders.append("Authorization", `Token ${localStorage.getItem('token')}`);
+                myHeaders.append("Content-Type", "application/json");
+
+                var raw = JSON.stringify({
+                "name": name, 
+                "type": type,
+                "cost": cost,
+                });
+
+                var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+                };
+
+                fetch("http://localhost:8000/servicesview/", requestOptions)
+                .then(response => response.text())
+                .then((result) => {
+                    document.getElementById("message").innerHTML = "Service Successfully Added!!!"
+                })
+                .catch((error) => {
+                    console.log(error)
+                    document.getElementById("error").innerHTML = "There was some Error!! Please try again"
+                });
+            }
+        }
+
+    </script>
 </html>

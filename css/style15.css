@@ -98,7 +98,7 @@ html,body{
 }
 
 .topdet{
-    height: 20%;
+    height: 25%;
     width: 100%;
     background-color:  rgb(246, 224, 191);
     border-top-left-radius: 20px;
@@ -241,4 +241,43 @@ html,body{
     color: #000;
     text-decoration: none;
     cursor: pointer;
+  }
+
+
+
+
+  form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+    width: 180px;
+    margin-bottom: 30px;
+    margin-left: 40px;
+  }
+  
+  /* Style the submit button */
+  form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: rgb(191, 147, 233);
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+  }
+  
+  form.example button:hover {
+    background:  rgb(166, 107, 221);
+  }
+  
+  /* Clear floats */
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
   }
