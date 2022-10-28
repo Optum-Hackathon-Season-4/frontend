@@ -54,7 +54,7 @@ body::before{
 
 .logincard{
     position: absolute;
-    left: 15%;
+    left: 50%;
     top: 15%;
     background-color: white;
     opacity: 0.9;
@@ -121,6 +121,8 @@ body::before{
     cursor: pointer;
     font-weight: bold;
     width: 60%;
+    justify-content: center;
+    text-align: center;
     
 }
 
