@@ -96,13 +96,13 @@
             //so whichever feedback given by this id and approved go ahead
             //iterate on all the doctors first 
             //first find id of looged in person
-            let pid;
-               var myHeaderscur = new Headers();
+            var myHeaders = new Headers();
+            var pid;
                 console.log(JSON.parse(localStorage.getItem('token')));
-                myHeaderscur.append("Authorization", `Token ${JSON.parse(localStorage.getItem('token'))}`);
+                myHeaders.append("Authorization", `Token ${JSON.parse(localStorage.getItem('token'))}`);
                 var requestOptions = {
                     method: 'GET',
-                    headers: myHeaderscur,
+                    headers: myHeaders,
                     redirect: 'follow'
                 };
 
@@ -110,16 +110,50 @@
                 .then(response => response.text())
                 .then((result) =>{
                     let data = JSON.parse(result)
-                    console.log(data);
-                    pid=data.id;
-
+                     console.log(data);
+                    // document.getElementById("name").innerHTML = `<b>Name : ${data.name} </b><br>Date of Birth: ${data.birth_date}<br>Contact No. ${data.phone_number}</b>`
+                    // document.getElementById("marital").innerHTML = `<b>Martial Status</b> : ${data.marital_status}`
+                    // document.getElementById("address").innerHTML = `<b>Address</b> : ${data.address}`
+                    // document.getElementById("gender").innerHTML = `<b>Gender</b> : ${data.gender}`
+                    // let allerhist="";
+                    // for(i=0;i<data.allergic_history.length();i++){
+                    //     allerhist+=`<tr><th>${i+1}</th><th>${data.allergic_history[i]}</th><th>${}`
+                    // }
+                    var pidd=data.id
+                    pid=pidd;
+                    console.log(data.id)
+                    console.log(pidd)
                 })
                     .catch((error) => {
                         console.log(error)
                         document.getElementById("message").innerHTML ="There was some error in getting the details"
                     });
+                    console.log('currently logged in')
+                    console.log(pid)
+            // var  pid;
+            //    var myHeaderscur = new Headers();
+            //     console.log(JSON.parse(localStorage.getItem('token')));
+            //     myHeaderscur.append("Authorization", `Token ${JSON.parse(localStorage.getItem('token'))}`);
+            //     var requestOptions = {
+            //         method: 'GET',
+            //         headers: myHeaderscur,
+            //         redirect: 'follow'
+            //     };
 
+            //     fetch("http://localhost:8000/specificpatientview/", requestOptions)
+            //     .then(response => response.text())
+            //     .then((result) =>{
+            //         let data = JSON.parse(result)
+            //         console.log(data);
+            //         pid=data.id;
 
+            //     })
+            //         .catch((error) => {
+            //             console.log(error)
+            //             document.getElementById("message").innerHTML ="There was some error in getting the details"
+            //         });
+            //     console.log('current loogedd in person is')
+            //     console.log(pid)
             //finding compatible feedback
             let imgsrc='other\\avatar.png';
             var myHeaders = new Headers();
@@ -154,6 +188,7 @@
                             let curpatid=feedback.patient;
                             console.log('patient who posted this is ')
                             console.log(curpatid)
+                            console.log(pid)
                             if(curpatid==pid){
                                 console.log('this feeback matches this is the one')
                                 console.log(feedback)

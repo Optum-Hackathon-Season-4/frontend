@@ -23,161 +23,6 @@
             </div>
         </div>
         <div class="split right" id="addrate">
-            <div class="rating_card">
-                <div class="topdet">
-                    <p class="txt">Doctor name<br>Type(operation/testing/medication)<br>id</p>
-                </div>
-                <div class="botdet">
-                    <div class="ratings">
-                        <div class="treatment_rating">
-                            <form class="rating">
-                                <label>
-                                <input type="radio" name="treatstars" value="1" />
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="treatstars" value="2" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="treatstars" value="3" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>   
-                                </label>
-                                <label>
-                                <input type="radio" name="treatstars" value="4" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="treatstars" value="5" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                            </form>
-                        </div>
-                        <div class="communication_rating">
-                            <form class="rating">
-                                <label>
-                                <input type="radio" name="stars" value="1" />
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="2" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="3" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>   
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="4" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="5" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                            </form>
-                        </div>
-                        <div class="collaboration_rating">
-                            <form class="rating">
-                                <label>
-                                <input type="radio" name="stars" value="1" />
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="2" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="3" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>   
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="4" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="5" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                            </form>
-                        </div>
-                        <div class="availability">
-                            <form class="rating">
-                                <label>
-                                <input type="radio" name="stars" value="1" />
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="2" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="3" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>   
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="4" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="5" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                            </form>
-                        </div>
-                        <div class="commentfordoctor">
-                            <textarea placeholder="Enter your comment"></textarea>
-                        </div>
-                     </div>
-                     <div class="labelss">
-                        <div class="lab">Treatment rating</div>
-                        <div class="lab">Communication rating</div>
-                        <div class="lab">Collaboration rating</div>
-                        <div class="lab">Availability</div>
-                        <div class="lab">Comment for your doctor</div>
-                     </div>
-                </div>
-            </div>
         </div>
         <script src="js/ratinghandler.js"></script>
         <script>
@@ -186,11 +31,13 @@
             var myHeaderscur = new Headers();
             console.log(JSON.parse(localStorage.getItem('token')));
             myHeaderscur.append("Authorization", `Token ${JSON.parse(localStorage.getItem('token'))}`);
+            console.log('header attached here');
             var requestOptions = {
                 method: 'GET',
                 headers: myHeaderscur,
                 redirect: 'follow'
             };
+            console.log('req option done')
             fetch("http://localhost:8000/specificpatientview/", requestOptions)
             .then(response => response.text())
             .then((result) =>{
@@ -200,8 +47,12 @@
             })
             .catch((error) => {
                 console.log(error)
-                document.getElementById("message").innerHTML ="There was some error in getting the details"
+                console.log("There was some error in getting the details")
             });
+
+            console.log('pid found')
+            console.log(pid)
+            const docidset=new Set();
 
             //walk through operationtest, medicine test and prescription tables
             //add doctor id, type of what this is and doctor name if possible 
@@ -214,188 +65,473 @@
                 redirect: 'follow'
             };
             var cnt=0;
+            var done=0;
             fetch("http://localhost:8000/operations/", requestOptions)
             .then((response) => response.text())
             .then((result) => {
                 let data = JSON.parse(result)
                 console.log(data);
-                data.forEach((elem) => {
+                data.forEach((elem) => {//for every operationdoctor
+                    console.log('current operation is');
                     console.log(elem);
+                    console.log(pid);
                     if(elem.patient==pid){
+                        console.log('a match')
+                        docidset.add(elem.doctor);
                         //here u can iterate on the doctor to add his name 
                         //u need to iterate on feeback for this doctor and check if user has already given
-                        treatcheck=["","","","",""]
-                        commcheck=["","","","",""]
-                        collabcheck=["","","","",""]
-                        availcheck=["","","","",""]
-                        const e1 = document.createElement('div');
-                        e1.innerHTML=`
-                        <div class="rating_card">
-                            <div class="topdet">
-                                <p class="txt">Doctor id:${elem.doctor}<br></p>
-                            </div>
-                            <div class="botdet">
-                                <div class="ratings">
-                                    <div class="treatment_rating">
-                                        <form class="rating">
-                                            <label>
-                                            <input type="radio" name="treatstars" onclick="mark('treatstars',0)" ${treatcheck[0]} value="1"  />
-                                            <span class="icon">★</span>
-                                            </label>
-                                            <label>
-                                            <input type="radio" name="treatstars" onclick="mark('treatstars',1)" ${treatcheck[1]} value="2" />
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            </label>
-                                            <label>
-                                            <input type="radio" name="treatstars" onclick="mark('treatstars',2)" ${treatcheck[2]} value="3" />
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>   
-                                            </label>
-                                            <label>
-                                            <input type="radio" name="treatstars" onclick="mark('treatstars',3)" ${treatcheck[3]} value="4" />
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            </label>
-                                            <label>
-                                            <input type="radio" name="treatstars" onclick="mark('treatstars',4)" ${treatcheck[4]} value="5" />
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            </label>
-                                        </form>
+                        //if the feedback is given show feedback statically they can no longer change it 
+                        //check feedback through openfeedback api if this doctor has been given feedback by the given id 
+                        // let did=elem.doctor
+                        // var requestOptions = {
+                        //     method: 'GET',
+                        //     redirect: 'follow'
+                        // };
+
+                        // fetch(`http://localhost:8000/openfeedback/${did}`, requestOptions)
+                        // .then(response3 => response3.text())
+                        // .then((result3) => {    //for every feedback given to this doctor
+                        //     let docfeeddata=JSON.parse(result3)
+                        //     console.log('feedback for this doctor');
+                        //     console.log(docfeeddata);
+                        //     docfeeddata.forEach((feedback)=>{
+                        //         console.log('current feedback')
+                        //         console.log(feedback);
+                        //         console.log(pid);
+                        //         console.log(feedback.patient)
+                        //         //if this feedback is given by the same ptient then put the element with value else skip this doctor
+                        //         if(feedback.patient==pid){
+                        //             done=1;
+                        //             console.log('done',done);
+                        //         }
+
+                        //     });
+                        // })
+                        // .catch((error3)=>{console.log(error3)})
+                        // console.log('done',done);  do done==0 when doing this function
+                        {
+                            console.log('gettin ghererere ')
+                            treatcheck=["","","","",""]
+                            commcheck=["","","","",""]
+                            collabcheck=["","","","",""]
+                            availcheck=["","","","",""]
+                            const e1 = document.createElement('div');
+                            e1.innerHTML=`
+                            <div class="rating_card">
+                                <div class="topdet">
+                                    <p class="txt">Doctor id:${elem.doctor}<br></p>
+                                </div>
+                                <div class="botdet">
+                                    <div class="ratings">
+                                        <div class="treatment_rating">
+                                            <form class="rating">
+                                                <label>
+                                                <input type="radio" name="treatstars" onclick="mark('treatstars',0)" ${treatcheck[0]} value="1"  />
+                                                <span class="icon">★</span>
+                                                </label>
+                                                <label>
+                                                <input type="radio" name="treatstars" onclick="mark('treatstars',1)" ${treatcheck[1]} value="2" />
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                </label>
+                                                <label>
+                                                <input type="radio" name="treatstars" onclick="mark('treatstars',2)" ${treatcheck[2]} value="3" />
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>   
+                                                </label>
+                                                <label>
+                                                <input type="radio" name="treatstars" onclick="mark('treatstars',3)" ${treatcheck[3]} value="4" />
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                </label>
+                                                <label>
+                                                <input type="radio" name="treatstars" onclick="mark('treatstars',4)" ${treatcheck[4]} value="5" />
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                </label>
+                                            </form>
+                                        </div>
+                                        <div class="communication_rating">
+                                            <form class="rating">
+                                                <label>
+                                                <input type="radio" name="commstars" onclick="mark('commstars',0)" ${commcheck[0]}  value="1" />
+                                                <span class="icon">★</span>
+                                                </label>
+                                                <label>
+                                                <input type="radio" name="commstars" onclick="mark('commstars',1)" ${commcheck[1]}  value="2" />
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                </label>
+                                                <label>
+                                                <input type="radio" name="commstars" onclick="mark('commstars',2)" ${commcheck[2]}  value="3" />
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>   
+                                                </label>
+                                                <label>
+                                                <input type="radio" name="commstars" onclick="mark('commstars',3)" ${commcheck[3]}  value="4" />
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                </label>
+                                                <label>
+                                                <input type="radio" name="commstars" onclick="mark('commstars',4)" ${commcheck[4]}  value="5" />
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                </label>
+                                            </form>
+                                        </div>
+                                        <div class="collaboration_rating">
+                                            <form class="rating">
+                                                <label>
+                                                <input type="radio"  name="collabstars" onclick="mark('collabstars',0)" ${collabcheck[0]}  value="1" />
+                                                <span class="icon">★</span>
+                                                </label>
+                                                <label>
+                                                <input type="radio"  name="collabstars" onclick="mark('collabstars',1)" ${collabcheck[1]}  value="2" />
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                </label>
+                                                <label>
+                                                <input type="radio"  name="collabstars" onclick="mark('collabstars',2)" ${collabcheck[2]}  value="3" />
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>   
+                                                </label>
+                                                <label>
+                                                <input type="radio"  name="collabstars" onclick="mark('collabstars',3)" ${collabcheck[3]} value="4" />
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                </label>
+                                                <label>
+                                                <input type="radio" name="collabstars" onclick="mark('collabstars',4)" ${collabcheck[4]}  value="5" />
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                </label>
+                                            </form>
+                                        </div>
+                                        <div class="availability">
+                                            <form class="rating">
+                                                <label>
+                                                <input type="radio" name="availstars" onclick="mark('availstars',0)" ${availcheck[0]}  value="1" />
+                                                <span class="icon">★</span>
+                                                </label>
+                                                <label>
+                                                <input type="radio" name="availstars" onclick="mark('availstars',1)" ${availcheck[1]}  value="2" />
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                </label>
+                                                <label>
+                                                <input type="radio" name="availstars" onclick="mark('availstars',2)" ${availcheck[2]}  value="3" />
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>   
+                                                </label>
+                                                <label>
+                                                <input type="radio"  name="availstars" onclick="mark('availstars',3)" ${availcheck[3]}  value="4" />
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                </label>
+                                                <label>
+                                                <input type="radio" name="availstars" onclick="mark('availstars',4)" ${availcheck[4]} value="5" />
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                </label>
+                                            </form>
+                                        </div>
+                                        <div class="commentfordoctor">
+                                            <textarea id="txt${cnt}" onclick="console.log(txt${cnt}.value)" placeholder="Enter your comment"></textarea>
+                                        </div>
                                     </div>
-                                    <div class="communication_rating">
-                                        <form class="rating">
-                                            <label>
-                                            <input type="radio" name="commstars" onclick="mark('commstars',0)" ${commcheck[0]}  value="1" />
-                                            <span class="icon">★</span>
-                                            </label>
-                                            <label>
-                                            <input type="radio" name="commstars" onclick="mark('commstars',1)" ${commcheck[1]}  value="2" />
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            </label>
-                                            <label>
-                                            <input type="radio" name="commstars" onclick="mark('commstars',2)" ${commcheck[2]}  value="3" />
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>   
-                                            </label>
-                                            <label>
-                                            <input type="radio" name="commstars" onclick="mark('commstars',3)" ${commcheck[3]}  value="4" />
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            </label>
-                                            <label>
-                                            <input type="radio" name="commstars" onclick="mark('commstars',4)" ${commcheck[4]}  value="5" />
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            </label>
-                                        </form>
-                                    </div>
-                                    <div class="collaboration_rating">
-                                        <form class="rating">
-                                            <label>
-                                            <input type="radio"  name="collabstars" onclick="mark('collabstars',0)" ${collabcheck[0]}  value="1" />
-                                            <span class="icon">★</span>
-                                            </label>
-                                            <label>
-                                            <input type="radio"  name="collabstars" onclick="mark('collabstars',1)" ${collabcheck[1]}  value="2" />
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            </label>
-                                            <label>
-                                            <input type="radio"  name="collabstars" onclick="mark('collabstars',2)" ${collabcheck[2]}  value="3" />
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>   
-                                            </label>
-                                            <label>
-                                            <input type="radio"  name="collabstars" onclick="mark('collabstars',3)" ${collabcheck[3]} value="4" />
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            </label>
-                                            <label>
-                                            <input type="radio" name="collabstars" onclick="mark('collabstars',4)" ${collabcheck[4]}  value="5" />
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            </label>
-                                        </form>
-                                    </div>
-                                    <div class="availability">
-                                        <form class="rating">
-                                            <label>
-                                            <input type="radio" name="availstars" onclick="mark('availstars',0)" ${availcheck[0]}  value="1" />
-                                            <span class="icon">★</span>
-                                            </label>
-                                            <label>
-                                            <input type="radio" name="availstars" onclick="mark('availstars',1)" ${availcheck[1]}  value="2" />
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            </label>
-                                            <label>
-                                            <input type="radio" name="availstars" onclick="mark('availstars',2)" ${availcheck[2]}  value="3" />
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>   
-                                            </label>
-                                            <label>
-                                            <input type="radio"  name="availstars" onclick="mark('availstars',3)" ${availcheck[3]}  value="4" />
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            </label>
-                                            <label>
-                                            <input type="radio" name="availstars" onclick="mark('availstars',4)" ${availcheck[4]} value="5" />
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            <span class="icon">★</span>
-                                            </label>
-                                        </form>
-                                    </div>
-                                    <div class="commentfordoctor">
-                                        <textarea id="txt${cnt}" onclick="console.log(txt${cnt}.value)" placeholder="Enter your comment"></textarea>
+                                    <div class="labelss">
+                                        <div class="lab">Treatment rating</div>
+                                        <div class="lab">Communication rating</div>
+                                        <div class="lab">Collaboration rating</div>
+                                        <div class="lab">Availability</div>
+                                        <button class="lab" onclick="sendfeed(${elem.doctor},treatcheck,collabcheck,commcheck,availcheck,txt${cnt}.value)">Send feedback for your doctor</button>
                                     </div>
                                 </div>
-                                <div class="labelss">
-                                    <div class="lab">Treatment rating</div>
-                                    <div class="lab">Communication rating</div>
-                                    <div class="lab">Collaboration rating</div>
-                                    <div class="lab">Availability</div>
-                                    <button class="lab" onclick="sendfeed(${elem.doctor},treatcheck,collabcheck,commcheck,availcheck,txt${cnt}.value)">Send feedback for your doctor</button>
-                                </div>
-                            </div>
-                        </div>`
-                        console.log(e1);
+                            </div>`
+                            console.log('attaching e1 element finally')
+                            console.log(e1);
                             document.getElementById("addrate").appendChild(e1);
                             console.log(document.getElementById('addrate'));
-                            
-                    cnt+=1;
+                            cnt+=1;
+                        }
+                        
                     }
+                    done=0;
                 });
             })
             .catch((error) => {
                 console.log(error)
             });  //this is to fetch operations to find doctors who operated 
+
+            console.log('starting prescription')
+            //now fetch for testing and smiliarly prescription
+            var myHeaders = new Headers();
+            myHeaders.append("Authorization", `Token ${JSON.parse(localStorage.getItem('token'))}`);
+            var requestOptions = {
+                method: 'GET',
+                headers: myHeaders,
+                redirect: 'follow'
+            };
+            done=0;
+            fetch("http://localhost:8000/prescriptions/", requestOptions)
+            .then((response) => response.text())
+            .then((result) => {
+                let data = JSON.parse(result)
+                console.log(data);
+                data.forEach((elem) => {//for every operationdoctor
+                    console.log('current prescription is');
+                    console.log(elem);
+                    console.log(pid);
+                    if(elem.patient==pid){
+                        console.log('a match')
+                        {
+                            docidset.add(elem.doctor);
+                        }
+                        
+                    }
+                    done=0;
+                });
+            })
+            .catch((error) => {
+                console.log(error)
+            });  //this is to fetch operations to find doctors who operated 
+            console.log('prescription ended')
+
+            console.log('testing check')
+            var myHeaders = new Headers();
+            myHeaders.append("Authorization", `Token ${JSON.parse(localStorage.getItem('token'))}`);
+            var requestOptions = {
+                method: 'GET',
+                headers: myHeaders,
+                redirect: 'follow'
+            };
+            done=0;
+            fetch("http://localhost:8000/medicaltests/", requestOptions)
+            .then((response) => response.text())
+            .then((result) => {
+                let data = JSON.parse(result)
+                console.log(data);
+                data.forEach((elem) => {//for every operationdoctor
+                    console.log('current test is');
+                    console.log(elem);
+                    console.log(pid);
+                    if(elem.patient==pid){
+                        console.log('a match')
+                        {
+                            docidset.add(elem.doctor);
+                        }
+                        
+                    }
+                    done=0;
+                });
+            })
+            .catch((error) => {
+                console.log(error)
+            }); 
+            console.log('testing end');
+
+
+
+            //check all the doctors in the set
+            console.log('all the doctors in this set ')
+            docidset.forEach(function(value){
+                console.log(value);
+            })
+
+            docidset.forEach(function(value){
+                console.log('gettin hererere ')
+                treatcheck=["","","","",""]
+                commcheck=["","","","",""]
+                collabcheck=["","","","",""]
+                availcheck=["","","","",""]
+                const e1 = document.createElement('div');
+                e1.innerHTML=`
+                <div class="rating_card">
+                    <div class="topdet">
+                        <p class="txt">Doctor id:${value}<br></p>
+                    </div>
+                    <div class="botdet">
+                        <div class="ratings">
+                            <div class="treatment_rating">
+                                <form class="rating">
+                                    <label>
+                                    <input type="radio" name="treatstars" onclick="mark('treatstars',0)" ${treatcheck[0]} value="1"  />
+                                    <span class="icon">★</span>
+                                    </label>
+                                    <label>
+                                    <input type="radio" name="treatstars" onclick="mark('treatstars',1)" ${treatcheck[1]} value="2" />
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    </label>
+                                    <label>
+                                    <input type="radio" name="treatstars" onclick="mark('treatstars',2)" ${treatcheck[2]} value="3" />
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>   
+                                    </label>
+                                    <label>
+                                    <input type="radio" name="treatstars" onclick="mark('treatstars',3)" ${treatcheck[3]} value="4" />
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    </label>
+                                    <label>
+                                    <input type="radio" name="treatstars" onclick="mark('treatstars',4)" ${treatcheck[4]} value="5" />
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    </label>
+                                </form>
+                            </div>
+                            <div class="communication_rating">
+                                <form class="rating">
+                                    <label>
+                                    <input type="radio" name="commstars" onclick="mark('commstars',0)" ${commcheck[0]}  value="1" />
+                                    <span class="icon">★</span>
+                                    </label>
+                                    <label>
+                                    <input type="radio" name="commstars" onclick="mark('commstars',1)" ${commcheck[1]}  value="2" />
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    </label>
+                                    <label>
+                                    <input type="radio" name="commstars" onclick="mark('commstars',2)" ${commcheck[2]}  value="3" />
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>   
+                                    </label>
+                                    <label>
+                                    <input type="radio" name="commstars" onclick="mark('commstars',3)" ${commcheck[3]}  value="4" />
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    </label>
+                                    <label>
+                                    <input type="radio" name="commstars" onclick="mark('commstars',4)" ${commcheck[4]}  value="5" />
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    </label>
+                                </form>
+                            </div>
+                            <div class="collaboration_rating">
+                                <form class="rating">
+                                    <label>
+                                    <input type="radio"  name="collabstars" onclick="mark('collabstars',0)" ${collabcheck[0]}  value="1" />
+                                    <span class="icon">★</span>
+                                    </label>
+                                    <label>
+                                    <input type="radio"  name="collabstars" onclick="mark('collabstars',1)" ${collabcheck[1]}  value="2" />
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    </label>
+                                    <label>
+                                    <input type="radio"  name="collabstars" onclick="mark('collabstars',2)" ${collabcheck[2]}  value="3" />
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>   
+                                    </label>
+                                    <label>
+                                    <input type="radio"  name="collabstars" onclick="mark('collabstars',3)" ${collabcheck[3]} value="4" />
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    </label>
+                                    <label>
+                                    <input type="radio" name="collabstars" onclick="mark('collabstars',4)" ${collabcheck[4]}  value="5" />
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    </label>
+                                </form>
+                            </div>
+                            <div class="availability">
+                                <form class="rating">
+                                    <label>
+                                    <input type="radio" name="availstars" onclick="mark('availstars',0)" ${availcheck[0]}  value="1" />
+                                    <span class="icon">★</span>
+                                    </label>
+                                    <label>
+                                    <input type="radio" name="availstars" onclick="mark('availstars',1)" ${availcheck[1]}  value="2" />
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    </label>
+                                    <label>
+                                    <input type="radio" name="availstars" onclick="mark('availstars',2)" ${availcheck[2]}  value="3" />
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>   
+                                    </label>
+                                    <label>
+                                    <input type="radio"  name="availstars" onclick="mark('availstars',3)" ${availcheck[3]}  value="4" />
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    </label>
+                                    <label>
+                                    <input type="radio" name="availstars" onclick="mark('availstars',4)" ${availcheck[4]} value="5" />
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    <span class="icon">★</span>
+                                    </label>
+                                </form>
+                            </div>
+                            <div class="commentfordoctor">
+                                <textarea id="txt${cnt}" onclick="console.log(txt${cnt}.value)" placeholder="Enter your comment"></textarea>
+                            </div>
+                        </div>
+                        <div class="labelss">
+                            <div class="lab">Treatment rating</div>
+                            <div class="lab">Communication rating</div>
+                            <div class="lab">Collaboration rating</div>
+                            <div class="lab">Availability</div>
+                            <button class="lab" onclick="sendfeed(${value},treatcheck,collabcheck,commcheck,availcheck,txt${cnt}.value)">Send feedback for your doctor</button>
+                        </div>
+                    </div>
+                </div>`
+                console.log('attaching e1 element finally')
+                console.log(e1);
+                document.getElementById("addrate").appendChild(e1);
+                console.log(document.getElementById('addrate'));
+                cnt+=1;
+            })
+            
 
                 function mark(starclass,starid){
                     console.log('mark has been called');
@@ -461,7 +597,7 @@
 
                         var requestOptions = {
                         method: 'POST',
-                        headers: myHeaders,
+                        headers: myHeadersfeed,
                         body: raw,
                         redirect: 'follow'
                         };
