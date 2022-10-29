@@ -55,7 +55,11 @@
         </div> -->
 
     <div class="split right">
-      <div></div>
+      <div>
+        <div>
+          <button class="addbtn" onclick="fun('myModaladdm','buttnaddm','closeaddm')"id="buttnaddm">Suggest Test</button>
+      </div>
+      </div>
       <div class="search">
       <link
         rel="stylesheet"
@@ -67,7 +71,7 @@
       </div>
     </div>
 
-    <div>
+    <!-- <div>
       <div class="details">
         <div style="text-align: center" class="opdate"><b>25 Oct 2022</b></div>
         <br />
@@ -76,41 +80,11 @@
         <div><b>Reason: </b>Leg Fracture</div>
         <div><b>Total Cost: </b>₹2000</div>
         <div><b>Discount Cost: </b>₹1599</div>
-        <!-- <div><b>Duration:</b> 2 weeks</div> -->
       </div>
-    </div>
-
-    <div>
-        <div class="details">
-          <div style="text-align: center" class="opdate"><b>25 Oct 2022</b></div>
-          <br />
-          <div><b>Medical Test ID: </b>#12345</div>
-          <div><b>Recommended by: </b>Dr Sani</div>
-          <div><b>Reason: </b>Leg Fracture</div>
-          <div><b>Total Cost: </b>₹2000</div>
-          <div><b>Discount Cost: </b>₹1599</div>
-          <!-- <div><b>Duration:</b> 2 weeks</div> -->
-        </div>
-      </div>
-
-      <div>
-        <div class="details">
-          <div style="text-align: center" class="opdate"><b>25 Oct 2022</b></div>
-          <br />
-          <div><b>Medical Test ID: </b>#12345</div>
-          <div><b>Recommended by: </b>Dr Sani</div>
-          <div><b>Reason: </b>Leg Fracture</div>
-          <div><b>Total Cost: </b>₹2000</div>
-          <div><b>Discount Cost: </b>₹1599</div>
-          <!-- <div><b>Duration:</b> 2 weeks</div> -->
-        </div>
-      </div>
+    </div> -->
 
 
 
-      <div>
-        <button class="addbtn" onclick="fun('myModaladdm','buttnaddm','closeaddm')"id="buttnaddm">Suggest Test</button>
-    </div>
     <div id="myModaladdm" class="modal">
         <div class="modal-content">
           <span id="closeaddm">&times;</span>
@@ -155,6 +129,7 @@
 
     <script src="js\doctor.js"></script>
     <script>
+      //simialrly for test get all tests of this patient(by every doctor) and then iterate on every test 
       function show(){
         let pid=document.getElementById("patientid").value;
         console.log(pid);
@@ -162,22 +137,36 @@
         myHeaders.append("Authorization", `Token ${localStorage.getItem('token')}`);
         myHeaders.append("Content-Type", "application/json");
 
-        var raw = JSON.stringify({
-          "id": pid
-        });
-
         var requestOptions = {
           method: 'GET',
           headers: myHeaders,
-          body: raw,
           redirect: 'follow'
         };
 
-        fetch("http://localhost:8000/medicaltests/", requestOptions)
+        fetch(`http://localhost:8000/medicaltests/${pid}`, requestOptions)
           .then(response => response.text())
           .then((result) =>{
-            
-            console.log(result);
+            let data = JSON.parse(result)
+                    console.log(data);
+                    data.forEach((patient)=>{
+                      console.log(patient)
+                      //we need to display all the operations differently 
+                      patient.tests.forEach((test)=>{
+                        console.log(test)
+                        const e1=document.createElement('div');
+                        e1.innerHTML=`<div class="details">
+                                    <div style="text-align: center" class="opdate"><b>25 Oct 2022</b></div>
+                                    <br />
+                                    <div><b>Patient ID:</b> ${patient.patient}</div>
+                                    <div><b>Doctor ID:</b> ${patient.doctor}</div>
+                                    <div><b>Test Name:</b> ${test.name}</div>
+                                    <div><b>Recommended by:</b>${test.recommendation}</div>
+                                    <div><b>Cost:</b> ${test.cost}</div>
+                                  </div>`;
+                        document.getElementsByClassName("split right")[0].appendChild(e1);
+                      })
+                    
+                    })
           })
           .catch(error => console.log('error', error));
       }
