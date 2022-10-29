@@ -22,7 +22,7 @@
                 <button class="btn" onclick="window.location.href='recommenddoctor.html'">Recommend doctor</button>
             </div>
         </div>
-        <div class="split right">
+        <div class="split right" id="addrate">
             <div class="rating_card">
                 <div class="topdet">
                     <p class="txt">Doctor name<br>Type(operation/testing/medication)<br>id</p>
@@ -32,649 +32,29 @@
                         <div class="treatment_rating">
                             <form class="rating">
                                 <label>
-                                <input type="radio" name="stars" value="1" />
+                                <input type="radio" name="treatstars" value="1" />
                                 <span class="icon">★</span>
                                 </label>
                                 <label>
-                                <input type="radio" name="stars" value="2" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="3" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>   
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="4" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
+                                <input type="radio" name="treatstars" value="2" />
                                 <span class="icon">★</span>
                                 <span class="icon">★</span>
                                 </label>
                                 <label>
-                                <input type="radio" name="stars" value="5" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                            </form>
-                        </div>
-                        <div class="communication_rating">
-                            <form class="rating">
-                                <label>
-                                <input type="radio" name="stars" value="1" />
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="2" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="3" />
+                                <input type="radio" name="treatstars" value="3" />
                                 <span class="icon">★</span>
                                 <span class="icon">★</span>
                                 <span class="icon">★</span>   
                                 </label>
                                 <label>
-                                <input type="radio" name="stars" value="4" />
+                                <input type="radio" name="treatstars" value="4" />
                                 <span class="icon">★</span>
                                 <span class="icon">★</span>
                                 <span class="icon">★</span>
                                 <span class="icon">★</span>
                                 </label>
                                 <label>
-                                <input type="radio" name="stars" value="5" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                            </form>
-                        </div>
-                        <div class="collaboration_rating">
-                            <form class="rating">
-                                <label>
-                                <input type="radio" name="stars" value="1" />
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="2" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="3" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>   
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="4" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="5" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                            </form>
-                        </div>
-                        <div class="availability">
-                            <form class="rating">
-                                <label>
-                                <input type="radio" name="stars" value="1" />
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="2" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="3" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>   
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="4" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="5" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                            </form>
-                        </div>
-                        <div class="commentfordoctor">
-                            <textarea placeholder="Enter your comment"></textarea>
-                        </div>
-                     </div>
-                     <div class="labelss">
-                        <div class="lab">Treatment rating</div>
-                        <div class="lab">Communication rating</div>
-                        <div class="lab">Collaboration rating</div>
-                        <div class="lab">Availability</div>
-                        <div class="lab">Comment for your doctor</div>
-                     </div>
-                </div>
-            </div>
-            <div class="rating_card">
-                <div class="topdet">
-                    <p class="txt">Doctor name<br>Type(operation/testing/medication)<br>id</p>
-                </div>
-                <div class="botdet">
-                    <div class="ratings">
-                        <div class="treatment_rating">
-                            <form class="rating">
-                                <label>
-                                <input type="radio" name="stars" value="1" />
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="2" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="3" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>   
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="4" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="5" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                            </form>
-                        </div>
-                        <div class="communication_rating">
-                            <form class="rating">
-                                <label>
-                                <input type="radio" name="stars" value="1" />
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="2" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="3" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>   
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="4" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="5" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                            </form>
-                        </div>
-                        <div class="collaboration_rating">
-                            <form class="rating">
-                                <label>
-                                <input type="radio" name="stars" value="1" />
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="2" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="3" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>   
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="4" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="5" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                            </form>
-                        </div>
-                        <div class="availability">
-                            <form class="rating">
-                                <label>
-                                <input type="radio" name="stars" value="1" />
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="2" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="3" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>   
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="4" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="5" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                            </form>
-                        </div>
-                        <div class="commentfordoctor">
-                            <textarea placeholder="Enter your comment"></textarea>
-                        </div>
-                     </div>
-                     <div class="labelss">
-                        <div class="lab">Treatment rating</div>
-                        <div class="lab">Communication rating</div>
-                        <div class="lab">Collaboration rating</div>
-                        <div class="lab">Availability</div>
-                        <div class="lab">Comment for your doctor</div>
-                     </div>
-                </div>
-            </div>
-            <div class="rating_card">
-                <div class="topdet">
-                    <p class="txt">Doctor name<br>Type(operation/testing/medication)<br>id</p>
-                </div>
-                <div class="botdet">
-                    <div class="ratings">
-                        <div class="treatment_rating">
-                            <form class="rating">
-                                <label>
-                                <input type="radio" name="stars" value="1" />
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="2" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="3" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>   
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="4" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="5" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                            </form>
-                        </div>
-                        <div class="communication_rating">
-                            <form class="rating">
-                                <label>
-                                <input type="radio" name="stars" value="1" />
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="2" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="3" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>   
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="4" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="5" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                            </form>
-                        </div>
-                        <div class="collaboration_rating">
-                            <form class="rating">
-                                <label>
-                                <input type="radio" name="stars" value="1" />
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="2" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="3" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>   
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="4" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="5" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                            </form>
-                        </div>
-                        <div class="availability">
-                            <form class="rating">
-                                <label>
-                                <input type="radio" name="stars" value="1" />
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="2" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="3" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>   
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="4" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="5" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                            </form>
-                        </div>
-                        <div class="commentfordoctor">
-                            <textarea placeholder="Enter your comment"></textarea>
-                        </div>
-                     </div>
-                     <div class="labelss">
-                        <div class="lab">Treatment rating</div>
-                        <div class="lab">Communication rating</div>
-                        <div class="lab">Collaboration rating</div>
-                        <div class="lab">Availability</div>
-                        <div class="lab">Comment for your doctor</div>
-                     </div>
-                </div>
-            </div>
-            <div class="rating_card">
-                <div class="topdet">
-                    <p class="txt">Doctor name<br>Type(operation/testing/medication)<br>id</p>
-                </div>
-                <div class="botdet">
-                    <div class="ratings">
-                        <div class="treatment_rating">
-                            <form class="rating">
-                                <label>
-                                <input type="radio" name="stars" value="1" />
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="2" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="3" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>   
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="4" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="5" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                            </form>
-                        </div>
-                        <div class="communication_rating">
-                            <form class="rating">
-                                <label>
-                                <input type="radio" name="stars" value="1" />
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="2" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="3" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>   
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="4" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="5" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                            </form>
-                        </div>
-                        <div class="collaboration_rating">
-                            <form class="rating">
-                                <label>
-                                <input type="radio" name="stars" value="1" />
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="2" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="3" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>   
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="4" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="5" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                            </form>
-                        </div>
-                        <div class="availability">
-                            <form class="rating">
-                                <label>
-                                <input type="radio" name="stars" value="1" />
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="2" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="3" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>   
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="4" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="5" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                            </form>
-                        </div>
-                        <div class="commentfordoctor">
-                            <textarea placeholder="Enter your comment"></textarea>
-                        </div>
-                     </div>
-                     <div class="labelss">
-                        <div class="lab">Treatment rating</div>
-                        <div class="lab">Communication rating</div>
-                        <div class="lab">Collaboration rating</div>
-                        <div class="lab">Availability</div>
-                        <div class="lab">Comment for your doctor</div>
-                     </div>
-                </div>
-            </div>
-            <div class="rating_card">
-                <div class="topdet">
-                    <p class="txt">Doctor name<br>Type(operation/testing/medication)<br>id</p>
-                </div>
-                <div class="botdet">
-                    <div class="ratings">
-                        <div class="treatment_rating">
-                            <form class="rating">
-                                <label>
-                                <input type="radio" name="stars" value="1" />
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="2" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="3" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>   
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="4" />
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                <span class="icon">★</span>
-                                </label>
-                                <label>
-                                <input type="radio" name="stars" value="5" />
+                                <input type="radio" name="treatstars" value="5" />
                                 <span class="icon">★</span>
                                 <span class="icon">★</span>
                                 <span class="icon">★</span>
@@ -799,7 +179,307 @@
                 </div>
             </div>
         </div>
-        <script src="ratinghandler.js"></script>
+        <script src="js/ratinghandler.js"></script>
+        <script>
+             //first find id of looged in person
+            let pid;
+            var myHeaderscur = new Headers();
+            console.log(JSON.parse(localStorage.getItem('token')));
+            myHeaderscur.append("Authorization", `Token ${JSON.parse(localStorage.getItem('token'))}`);
+            var requestOptions = {
+                method: 'GET',
+                headers: myHeaderscur,
+                redirect: 'follow'
+            };
+            fetch("http://localhost:8000/specificpatientview/", requestOptions)
+            .then(response => response.text())
+            .then((result) =>{
+                let data = JSON.parse(result)
+                console.log(data);
+                pid=data.id;
+            })
+            .catch((error) => {
+                console.log(error)
+                document.getElementById("message").innerHTML ="There was some error in getting the details"
+            });
+
+            //walk through operationtest, medicine test and prescription tables
+            //add doctor id, type of what this is and doctor name if possible 
+            var myHeaders = new Headers();
+            //fetching operations
+            myHeaders.append("Authorization", `Token ${JSON.parse(localStorage.getItem('token'))}`);
+            var requestOptions = {
+                method: 'GET',
+                headers: myHeaders,
+                redirect: 'follow'
+            };
+            var cnt=0;
+            fetch("http://localhost:8000/operations/", requestOptions)
+            .then((response) => response.text())
+            .then((result) => {
+                let data = JSON.parse(result)
+                console.log(data);
+                data.forEach((elem) => {
+                    console.log(elem);
+                    if(elem.patient==pid){
+                        //here u can iterate on the doctor to add his name 
+                        //u need to iterate on feeback for this doctor and check if user has already given
+                        treatcheck=["","","","",""]
+                        commcheck=["","","","",""]
+                        collabcheck=["","","","",""]
+                        availcheck=["","","","",""]
+                        const e1 = document.createElement('div');
+                        e1.innerHTML=`
+                        <div class="rating_card">
+                            <div class="topdet">
+                                <p class="txt">Doctor id:${elem.doctor}<br></p>
+                            </div>
+                            <div class="botdet">
+                                <div class="ratings">
+                                    <div class="treatment_rating">
+                                        <form class="rating">
+                                            <label>
+                                            <input type="radio" name="treatstars" onclick="mark('treatstars',0)" ${treatcheck[0]} value="1"  />
+                                            <span class="icon">★</span>
+                                            </label>
+                                            <label>
+                                            <input type="radio" name="treatstars" onclick="mark('treatstars',1)" ${treatcheck[1]} value="2" />
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            </label>
+                                            <label>
+                                            <input type="radio" name="treatstars" onclick="mark('treatstars',2)" ${treatcheck[2]} value="3" />
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>   
+                                            </label>
+                                            <label>
+                                            <input type="radio" name="treatstars" onclick="mark('treatstars',3)" ${treatcheck[3]} value="4" />
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            </label>
+                                            <label>
+                                            <input type="radio" name="treatstars" onclick="mark('treatstars',4)" ${treatcheck[4]} value="5" />
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            </label>
+                                        </form>
+                                    </div>
+                                    <div class="communication_rating">
+                                        <form class="rating">
+                                            <label>
+                                            <input type="radio" name="commstars" onclick="mark('commstars',0)" ${commcheck[0]}  value="1" />
+                                            <span class="icon">★</span>
+                                            </label>
+                                            <label>
+                                            <input type="radio" name="commstars" onclick="mark('commstars',1)" ${commcheck[1]}  value="2" />
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            </label>
+                                            <label>
+                                            <input type="radio" name="commstars" onclick="mark('commstars',2)" ${commcheck[2]}  value="3" />
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>   
+                                            </label>
+                                            <label>
+                                            <input type="radio" name="commstars" onclick="mark('commstars',3)" ${commcheck[3]}  value="4" />
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            </label>
+                                            <label>
+                                            <input type="radio" name="commstars" onclick="mark('commstars',4)" ${commcheck[4]}  value="5" />
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            </label>
+                                        </form>
+                                    </div>
+                                    <div class="collaboration_rating">
+                                        <form class="rating">
+                                            <label>
+                                            <input type="radio"  name="collabstars" onclick="mark('collabstars',0)" ${collabcheck[0]}  value="1" />
+                                            <span class="icon">★</span>
+                                            </label>
+                                            <label>
+                                            <input type="radio"  name="collabstars" onclick="mark('collabstars',1)" ${collabcheck[1]}  value="2" />
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            </label>
+                                            <label>
+                                            <input type="radio"  name="collabstars" onclick="mark('collabstars',2)" ${collabcheck[2]}  value="3" />
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>   
+                                            </label>
+                                            <label>
+                                            <input type="radio"  name="collabstars" onclick="mark('collabstars',3)" ${collabcheck[3]} value="4" />
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            </label>
+                                            <label>
+                                            <input type="radio" name="collabstars" onclick="mark('collabstars',4)" ${collabcheck[4]}  value="5" />
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            </label>
+                                        </form>
+                                    </div>
+                                    <div class="availability">
+                                        <form class="rating">
+                                            <label>
+                                            <input type="radio" name="availstars" onclick="mark('availstars',0)" ${availcheck[0]}  value="1" />
+                                            <span class="icon">★</span>
+                                            </label>
+                                            <label>
+                                            <input type="radio" name="availstars" onclick="mark('availstars',1)" ${availcheck[1]}  value="2" />
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            </label>
+                                            <label>
+                                            <input type="radio" name="availstars" onclick="mark('availstars',2)" ${availcheck[2]}  value="3" />
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>   
+                                            </label>
+                                            <label>
+                                            <input type="radio"  name="availstars" onclick="mark('availstars',3)" ${availcheck[3]}  value="4" />
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            </label>
+                                            <label>
+                                            <input type="radio" name="availstars" onclick="mark('availstars',4)" ${availcheck[4]} value="5" />
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            <span class="icon">★</span>
+                                            </label>
+                                        </form>
+                                    </div>
+                                    <div class="commentfordoctor">
+                                        <textarea id="txt${cnt}" onclick="console.log(txt${cnt}.value)" placeholder="Enter your comment"></textarea>
+                                    </div>
+                                </div>
+                                <div class="labelss">
+                                    <div class="lab">Treatment rating</div>
+                                    <div class="lab">Communication rating</div>
+                                    <div class="lab">Collaboration rating</div>
+                                    <div class="lab">Availability</div>
+                                    <button class="lab" onclick="sendfeed(${elem.doctor},treatcheck,collabcheck,commcheck,availcheck,txt${cnt}.value)">Send feedback for your doctor</button>
+                                </div>
+                            </div>
+                        </div>`
+                        console.log(e1);
+                            document.getElementById("addrate").appendChild(e1);
+                            console.log(document.getElementById('addrate'));
+                            
+                    cnt+=1;
+                    }
+                });
+            })
+            .catch((error) => {
+                console.log(error)
+            });  //this is to fetch operations to find doctors who operated 
+
+                function mark(starclass,starid){
+                    console.log('mark has been called');
+                    if(starclass=="treatstars"){
+                        console.log('this is treatment rating');
+                        for(i=0;i<5;i++)treatcheck[i]="";
+                        treatcheck[starid]="checked"
+                        console.log('chekcing treatment rating');
+                        console.log(starid);
+                    }else if(starclass=="commstars"){
+                        console.log('this is communication rating');
+                        for(i=0;i<5;i++)commcheck[i]="";
+                        commcheck[starid]="checked"
+                        console.log('checking communication rating');
+                        console.log(starid);
+                    }else if(starclass=="collabstars"){
+                        console.log('this is collboration rating');
+                        for(i=0;i<5;i++)collabcheck[i]="";
+                        collabcheck[starid]="checked"
+                        console.log('checking collaboration rating');
+                        console.log(starid);
+                    }else if(starclass=="availstars"){
+                        console.log('this is availability rating')
+                        for(i=0;i<5;i++)availcheck[i]=""
+                        availcheck[starid]="checked"
+                        console.log('checking availability')
+                        console.log(starid);
+                    }
+                }
+                function sendfeed(did,treatcheck,collabcheck,commcheck,availcheck,putrev){
+                                     //update the feeback using feetback post api
+                    var myHeadersfeed = new Headers();
+                    console.log(JSON.parse(localStorage.getItem('token')));
+                    myHeadersfeed.append("Authorization", `Token ${JSON.parse(localStorage.getItem('token'))}`);
+                    myHeadersfeed.append("Content-Type", "application/json");
+                    var puttreat=1;
+                    var putavail=1;
+                    var putcollab=1;
+                    var putcomm=1;
+                    for(i=0;i<5;i++){
+                        if(treatcheck[i]=="checked"){
+                            puttreat=i+1;
+                        }
+                        if(collabcheck[i]=="checked"){
+                            putcollab=i+1;
+                        }
+                        if(commcheck[i]=="checked"){
+                            putcomm=i+1;
+                        }
+                        if(availcheck[i]=="checked"){
+                            putavail=i+1;
+                        }
+                    }
+                        var raw = JSON.stringify({
+                        "doctor": did,
+                        "availability": putavail,
+                        "collaboration_rating": putcollab,
+                        "communication_rating": putcomm,
+                        "treatment_rating": puttreat,
+                        "reviews":putrev,
+                        });
+                        console.log(raw);
+
+                        var requestOptions = {
+                        method: 'POST',
+                        headers: myHeaders,
+                        body: raw,
+                        redirect: 'follow'
+                        };
+
+                        fetch("http://localhost:8000/feedback/", requestOptions)
+                        .then(response2 => response2.text())
+                        .then((result2) =>{
+                            //putting feedback for this patient
+                            console.log('sending feedback by the patient')
+                            let data2 = JSON.parse(result2)
+                            console.log(data2);
+                        })
+                        .catch(error2 => console.log('error', error2));
+                    }
+                    
+               
+
+        </script>
     </body>
 </html>
 

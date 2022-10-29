@@ -92,14 +92,13 @@ html,body{
     margin-right:auto ;
     margin-bottom:5% ;
     width: 80%;
-
     background-color: white;
     border-radius: 20px;
-    min-height: 400px;
+    height: 400px;
 }
 
 .topdet{
-    height: 30%;
+    height: 20%;
     width: 100%;
     background-color:  rgb(246, 224, 191);
     border-top-left-radius: 20px;
