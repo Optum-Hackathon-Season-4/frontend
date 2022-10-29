@@ -56,15 +56,15 @@
 
     <div class="split right">
       <div></div>
-      <div class="search>
+      <div class="search">
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
       />
-      <form class="example" action="action_page.php">
-        <input type="text" placeholder="Enter the Patient ID" name="search" />
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
+      <div class="example" >
+        <input type="text" id="patientid" placeholder="Enter the Patient ID" name="search" />
+        <button  onclick="show()"><i class="fa fa-search"></i></button>
+      </div>
     </div>
 
     <div>
@@ -154,5 +154,34 @@
 
 
     <script src="js\doctor.js"></script>
+    <script>
+      function show(){
+        let pid=document.getElementById("patientid").value;
+        console.log(pid);
+        var myHeaders = new Headers();
+        myHeaders.append("Authorization", `Token ${localStorage.getItem('token')}`);
+        myHeaders.append("Content-Type", "application/json");
+
+        var raw = JSON.stringify({
+          "id": pid
+        });
+
+        var requestOptions = {
+          method: 'GET',
+          headers: myHeaders,
+          body: raw,
+          redirect: 'follow'
+        };
+
+        fetch("http://localhost:8000/medicaltests/", requestOptions)
+          .then(response => response.text())
+          .then((result) =>{
+            
+            console.log(result);
+          })
+          .catch(error => console.log('error', error));
+      }
+      
+    </script>
   </body>
 </html>

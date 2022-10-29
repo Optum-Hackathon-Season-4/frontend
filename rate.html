@@ -320,7 +320,6 @@
                 console.log(error)
             });  //this is to fetch operations to find doctors who operated 
             console.log('prescription ended')
-
             console.log('testing check')
             var myHeaders = new Headers();
             myHeaders.append("Authorization", `Token ${JSON.parse(localStorage.getItem('token'))}`);
@@ -353,9 +352,6 @@
                 console.log(error)
             }); 
             console.log('testing end');
-
-
-
             //check all the doctors in the set
             console.log('all the doctors in this set ')
             docidset.forEach(function(value){
@@ -587,11 +583,11 @@
                     }
                         var raw = JSON.stringify({
                         "doctor": did,
-                        "availability": putavail,
-                        "collaboration_rating": putcollab,
-                        "communication_rating": putcomm,
-                        "treatment_rating": puttreat,
-                        "reviews":putrev,
+                        "availability": putavail*2,
+                        "collaboration_rating": putcollab*2,
+                        "communication_rating": putcomm*2,
+                        "treatment_rating": puttreat*2,
+                        "reviews":putrev*2,
                         });
                         console.log(raw);
 

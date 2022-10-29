@@ -178,7 +178,7 @@ html,body{
   }
   
   /* Style the search field */
-  form.example input[type=text] {
+  div.example input[type=text] {
     padding: 10px;
     font-size: 17px;
     border: 1px solid grey;
@@ -188,7 +188,7 @@ html,body{
   }
   
   /* Style the submit button */
-  form.example button {
+  div.example button {
     float: left;
     width: 20%;
     padding: 10px;
@@ -200,12 +200,12 @@ html,body{
     cursor: pointer;
   }
   
-  form.example button:hover {
+  div.example button:hover {
     background:  rgb(166, 107, 221);
   }
   
   /* Clear floats */
-  form.example::after {
+  div.example::after {
     content: "";
     clear: both;
     display: table;

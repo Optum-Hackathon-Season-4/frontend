@@ -87,7 +87,7 @@ where to put search for doctors ?? -->
         </div>
         <script>
                 var myHeaders = new Headers();
-                console.log(JSON.parse(localStorage.getItem('token')));
+            //    console.log(JSON.parse(localStorage.getItem('token')));
                 myHeaders.append("Authorization", `Token ${JSON.parse(localStorage.getItem('token'))}`);
                 var requestOptions = {
                     method: 'GET',
@@ -116,7 +116,6 @@ where to put search for doctors ?? -->
                         console.log(error)
                         document.getElementById("message").innerHTML ="There was some error in getting the details"
                     });
-                
         </script>
 
     </body>
