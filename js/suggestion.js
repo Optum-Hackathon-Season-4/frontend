@@ -20,3 +20,5 @@ let suggestions=[
 'silver_like_dusting','small_dents_in_nails','inflammatory_nails','blister','red_sore_around_nose',
 'yellow_crust_ooze'
 ];
+
+

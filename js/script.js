@@ -59,22 +59,16 @@ function showSuggestions(list){
 
 
 function recommendd(){
-    for(i=0;i<curitem.length;i++){
-        console.log(curitem[i]);
-    }
+    // for(i=0;i<curitem.length;i++){
+    //     console.log(curitem[i]);
+    // }
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
     var obj={};
     for(i=0;i<curitem.length;i++){
         obj[curitem[i]]=1;
     }
-    console.log(obj);
-    var raw = JSON.stringify({
-    "redness_of_eyes": 1,
-    "congestion": 1,
-    "pain_during_bowel_movements": 1,
-    "neck_pain": 1
-    });
+    var raw = JSON.stringify(obj);
 
     var requestOptions = {
     method: 'POST',
@@ -82,9 +76,22 @@ function recommendd(){
     body: raw,
     redirect: 'follow'
     };
+    document.getElementById("loading").innerHTML = "Loading Please Wait.."
+    document.getElementById("")
 
     fetch("http://localhost:8000/doctor_recommendation", requestOptions)
     .then(response => response.text())
-    .then(result => console.log(result))
-    .catch(error => console.log('error', error));
+    .then((result) => {
+        let result1 = JSON.parse(result)
+        document.getElementById("loading").innerHTML = ""
+        document.getElementById("result").innerHTML = `Disease Detected : ${result1.Symptomps} <br> Specialization : ${result1.Specialization}`
+
+
+    })
+    .catch((error) => {
+        document.getElementById("loading").innerHTML = ""
+        document.getElementById("error").innerHTML = "There was Some Error !! Please try Again"
+
+
+    });
 }

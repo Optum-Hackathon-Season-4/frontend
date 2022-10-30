@@ -37,37 +37,32 @@
         <div id="prescription" class="split right">
             
             
-            <div></div>
-            <div class="search">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-            
-            
-            <form class="example" onsubmit="fetchDetails(event)">
-            <input id="patientid" type="text" placeholder="Enter the Patient ID" name="search">
-            <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-            </div>
-
-            
-          
-
-
-
-            
-
-
-            
-
-
-            
-
-
-        
-
-
             <div>
                 <button class="addbtn" onclick="fun('myModaladdp','buttnaddp','closeaddp')"id="buttnaddp">Add Precription</button>
             </div>
+
+
+            <div class="search">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <div class="example" onsubmit="fetchDetails(event)">
+            <input id="patientid" type="text" placeholder="Enter the Patient ID" name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+            </div> 
+            <!-- changing above tag to form -->
+            </div>
+
+
+            <!-- <div class="search">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+                <div class="example" >
+                  <input  id="patientid" type="text" placeholder="Enter the Patient ID" name="search" />
+                  <button  onclick="show()"><i class="fa fa-search"></i></button>
+                </div>
+              </div> -->
+
+
+
+            
             <div id="myModaladdp" class="modal">
                 <div class="modal-content">
                   <span id="closeaddp">&times;</span>

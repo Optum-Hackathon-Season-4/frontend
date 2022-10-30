@@ -44,7 +44,7 @@ where to put search for doctors ?? -->
                         <div><p id="hospitall">
                             <b>Hospital</b><br>DMC, Ludhiana
                         </p></div>
-                        <div><p id="special">
+                        <div><p id="special" style="margin-right: 20px;">
                             <b>Specialization</b><br>Cardiologist
                         </p></div>
                         <div><p id="gender">
@@ -80,7 +80,7 @@ where to put search for doctors ?? -->
                 .then((result) =>{
                     let data = JSON.parse(result)
                     console.log(data);
-                     document.getElementById("name").innerHTML = `<p><b>Name_of_the_Doctor: ${data.name}</b><br>Age: ${data.age}</p>`
+                     document.getElementById("name").innerHTML = `<p><b>Name: ${data.name}</b><br>Age: ${data.age}</p>`
                      document.getElementById("hospitall").innerHTML = `<b>Hospital: </b><br>${data.hospital.name}`
                      document.getElementById("special").innerHTML = `<b>Specialization: </b><br>${data.specialization}`
                      document.getElementById("gender").innerHTML = ` <b>Gender: </b><br>${data.gender}`
