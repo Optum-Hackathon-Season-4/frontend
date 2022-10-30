@@ -5,6 +5,7 @@ const suggBox = searchWrapper.querySelector(".autocom-box");
 const icon = searchWrapper.querySelector(".icon");
 let linkTag = searchWrapper.querySelector("a");
 let webLink;
+let curitem=[];
 // if user press any key and release
 inputBox.onkeyup = (e)=>{
     let userData = e.target.value; //user enetered data
@@ -37,11 +38,10 @@ inputBox.onkeyup = (e)=>{
 function select(element){
     let selectData = element.textContent;
     inputBox.value="";
-    document.getElementById("selectedlist").innerHTML+=`<li class='selectbox'>${selectData}<span class='close'  onclick="this.parentElement.style.display = 'none';">&times;</span></li>`;
+    curitem.push(selectData);
+    document.getElementById("selectedlist").innerHTML+=`<li class='selectbox'>${selectData}<span class='close'  onclick="this.parentElement.style.display = 'none'; curitem=curitem.filter(function(item){return item!=${selectData}});">&times;</span></li>`;
     icon.onclick = ()=>{
-        webLink = `https://www.google.com/search?q=${selectData}`;
-        linkTag.setAttribute("href", webLink);
-        linkTag.click();
+        recommendd();
     }
     searchWrapper.classList.remove("active");
 }
@@ -57,3 +57,34 @@ function showSuggestions(list){
 }
 
 
+
+function recommendd(){
+    for(i=0;i<curitem.length;i++){
+        console.log(curitem[i]);
+    }
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    var obj={};
+    for(i=0;i<curitem.length;i++){
+        obj[curitem[i]]=1;
+    }
+    console.log(obj);
+    var raw = JSON.stringify({
+    "redness_of_eyes": 1,
+    "congestion": 1,
+    "pain_during_bowel_movements": 1,
+    "neck_pain": 1
+    });
+
+    var requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow'
+    };
+
+    fetch("http://localhost:8000/doctor_recommendation", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
+}

@@ -23,7 +23,6 @@ where to put search for doctors ?? -->
                 <button class="btn" onclick="window.location.href='prescription.html'">Past Prescriptions</button>
                 <button class="btn" onclick="window.location.href='testing.html'">Past testing</button>
                 <button class="btn" onclick="window.location.href='operation.html'">Past operations</button>
-                <button class="btn" onclick="window.location.href='doctor.html'">Past Doctors</button>
                 <button class="btn" onclick="window.location.href='review.html'">Past reviews</button>
                 <button class="btn" onclick="window.location.href='find_doctor.html'">Find a new doctor</button>
                 <button class="btn" onclick="window.location.href='rate.html'">Rate it</button>
@@ -88,7 +87,7 @@ where to put search for doctors ?? -->
         </div>
         <script>
                 var myHeaders = new Headers();
-                console.log(JSON.parse(localStorage.getItem('token')));
+            //    console.log(JSON.parse(localStorage.getItem('token')));
                 myHeaders.append("Authorization", `Token ${JSON.parse(localStorage.getItem('token'))}`);
                 var requestOptions = {
                     method: 'GET',
@@ -109,13 +108,14 @@ where to put search for doctors ?? -->
                     // for(i=0;i<data.allergic_history.length();i++){
                     //     allerhist+=`<tr><th>${i+1}</th><th>${data.allergic_history[i]}</th><th>${}`
                     // }
-
+                    var pidd=data.id
+                    console.log(data.id)
+                    console.log(pidd)
                 })
                     .catch((error) => {
                         console.log(error)
                         document.getElementById("message").innerHTML ="There was some error in getting the details"
                     });
-                
         </script>
 
     </body>

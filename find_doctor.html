@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,15 +17,14 @@
                 <button class="btn" onclick="window.location.href='prescription.html'">Past Prescriptions</button>
                 <button class="btn" onclick="window.location.href='testing.html'">Past testing</button>
                 <button class="btn" onclick="window.location.href='operation.html'">Past operations</button>
-                <button class="btn" onclick="window.location.href='doctor.html'">Past Doctors</button>
                 <button class="btn" onclick="window.location.href='review.html'">Past reviews</button>
                 <button class="btn" style="background-color: white;"onclick="window.location.href='find_doctor.html'">Find a new doctor</button>
                 <button class="btn" onclick="window.location.href='rate.html'">Rate it</button>
                 <button class="btn" onclick="window.location.href='recommenddoctor.html'">Recommend doctor</button>
             </div>
         </div>
-        <div class="split right">
-            <div class="doctor_card">
+        <div class="split right" id="adddoctor">
+            <!-- <div class="doctor_card">
                 <div class="leftcard">
                     <div class="pic">
                        <img src="other\avatar.png" style="width:80%; padding-left:20% ;">
@@ -48,237 +48,73 @@
                     <div>Specialization</div>
                     <div>charges</div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="doctor_card">
-                <div class="leftcard">
-                    <div class="pic">
-                       <img src="other\avatar.png" style="width:80%; padding-left:20% ;">
-                    </div>
-                    <div class="stars">
-                        <span class="fa fa-star checked" style="font-size:20px ;"></span>
-                        <span class="fa fa-star checked" style="font-size:20px ;"></span>
-                        <span class="fa fa-star checked" style="font-size: 20px;"></span>
-                        <span class="fa fa-star" style="font-size:20px ;"></span>
-                        <span class="fa fa-star" style="font-size:20px ;"></span>
-                    </div>
-                    <div>
-                        <button class="bookbtn">Book appointment</button>
-                    </div>
-                </div>
-                <div class="details">
-                    <div>Name</div>
-                    <div>Age</div>
-                    <div>Gender</div>
-                    <div>Hospital</div>
-                    <div>Specialization</div>
-                    <div>charges</div>
-                </div>
-            </div>
-
-            <div class="doctor_card">
-                <div class="leftcard">
-                    <div class="pic">
-                       <img src="other\avatar.png" style="width:80%; padding-left:20% ;">
-                    </div>
-                    <div class="stars">
-                        <span class="fa fa-star checked" style="font-size:20px ;"></span>
-                        <span class="fa fa-star checked" style="font-size:20px ;"></span>
-                        <span class="fa fa-star checked" style="font-size: 20px;"></span>
-                        <span class="fa fa-star" style="font-size:20px ;"></span>
-                        <span class="fa fa-star" style="font-size:20px ;"></span>
-                    </div>
-                    <div>
-                        <button class="bookbtn">Book appointment</button>
-                    </div>
-                </div>
-                <div class="details">
-                    <div>Name</div>
-                    <div>Age</div>
-                    <div>Gender</div>
-                    <div>Hospital</div>
-                    <div>Specialization</div>
-                    <div>charges</div>
-                </div>
-            </div>
-
-            <div class="doctor_card">
-                <div class="leftcard">
-                    <div class="pic">
-                       <img src="other\avatar.png" style="width:80%; padding-left:20% ;">
-                    </div>
-                    <div class="stars">
-                        <span class="fa fa-star checked" style="font-size:20px ;"></span>
-                        <span class="fa fa-star checked" style="font-size:20px ;"></span>
-                        <span class="fa fa-star checked" style="font-size: 20px;"></span>
-                        <span class="fa fa-star" style="font-size:20px ;"></span>
-                        <span class="fa fa-star" style="font-size:20px ;"></span>
-                    </div>
-                    <div>
-                        <button class="bookbtn">Book appointment</button>
-                    </div>
-                </div>
-                <div class="details">
-                    <div>Name</div>
-                    <div>Age</div>
-                    <div>Gender</div>
-                    <div>Hospital</div>
-                    <div>Specialization</div>
-                    <div>charges</div>
-                </div>
-            </div>
-
-            <div class="doctor_card">
-                <div class="leftcard">
-                    <div class="pic">
-                       <img src="other\avatar.png" style="width:80%; padding-left:20% ;">
-                    </div>
-                    <div class="stars">
-                        <span class="fa fa-star checked" style="font-size:20px ;"></span>
-                        <span class="fa fa-star checked" style="font-size:20px ;"></span>
-                        <span class="fa fa-star checked" style="font-size: 20px;"></span>
-                        <span class="fa fa-star" style="font-size:20px ;"></span>
-                        <span class="fa fa-star" style="font-size:20px ;"></span>
-                    </div>
-                    <div>
-                        <button class="bookbtn">Book appointment</button>
-                    </div>
-                </div>
-                <div class="details">
-                    <div>Name</div>
-                    <div>Age</div>
-                    <div>Gender</div>
-                    <div>Hospital</div>
-                    <div>Specialization</div>
-                    <div>charges</div>
-                </div>
-            </div>
-
-            <div class="doctor_card">
-                <div class="leftcard">
-                    <div class="pic">
-                       <img src="other\avatar.png" style="width:80%; padding-left:20% ;">
-                    </div>
-                    <div class="stars">
-                        <span class="fa fa-star checked" style="font-size:20px ;"></span>
-                        <span class="fa fa-star checked" style="font-size:20px ;"></span>
-                        <span class="fa fa-star checked" style="font-size: 20px;"></span>
-                        <span class="fa fa-star" style="font-size:20px ;"></span>
-                        <span class="fa fa-star" style="font-size:20px ;"></span>
-                    </div>
-                    <div>
-                        <button class="bookbtn">Book appointment</button>
-                    </div>
-                </div>
-                <div class="details">
-                    <div>Name</div>
-                    <div>Age</div>
-                    <div>Gender</div>
-                    <div>Hospital</div>
-                    <div>Specialization</div>
-                    <div>charges</div>
-                </div>
-            </div>
-
-            <div class="doctor_card">
-                <div class="leftcard">
-                    <div class="pic">
-                       <img src="other\avatar.png" style="width:80%; padding-left:20% ;">
-                    </div>
-                    <div class="stars">
-                        <span class="fa fa-star checked" style="font-size:20px ;"></span>
-                        <span class="fa fa-star checked" style="font-size:20px ;"></span>
-                        <span class="fa fa-star checked" style="font-size: 20px;"></span>
-                        <span class="fa fa-star" style="font-size:20px ;"></span>
-                        <span class="fa fa-star" style="font-size:20px ;"></span>
-                    </div>
-                    <div>
-                        <button class="bookbtn">Book appointment</button>
-                    </div>
-                </div>
-                <div class="details">
-                    <div>Name</div>
-                    <div>Age</div>
-                    <div>Gender</div>
-                    <div>Hospital</div>
-                    <div>Specialization</div>
-                    <div>charges</div>
-                </div>
-            </div>
-            <div style="position:relative;top:100% ;height: 60px"></div>
+            
             
         </div>
         <script>
+            let imgsrc='other\\avatar.png';
             var myHeaders = new Headers();
-            myHeaders.append("Authorization", `Token ${JSON.parse(localStorage.getItem('token'))}`);
+        //    myHeaders.append("Authorization", `Token ${JSON.parse(localStorage.getItem('token'))}`);
             var requestOptions = {
                 method: 'GET',
                 headers: myHeaders,
                 redirect: 'follow'
             };
-            fetch("http://localhost:8000/medicaltests/", requestOptions)
+            fetch("http://localhost:8000/doctor/", requestOptions)
             .then((response) => response.text())
             .then((result) => {
                 let data = JSON.parse(result)
                 console.log(data);
                 data.forEach((elem) => {
+                    console.log(elem);
                     const e1 = document.createElement('div');
                     let cnt=0;
+                    let rates=["","","","",""];
+                    let avg=(elem.availability_rating+elem.collaboration_rating+elem.communication_rating+elem.treatment_rating)/4;
+                    console.log(avg/2);
+                    for(i=1;i<=5;i++){
+                        if(i<=avg){
+                            rates[i-1]="checked";
+                        }
+                    }
+                    
                     e1.innerHTML=`
-                    <div class="card">
+                    <div class="doctor_card">
                         <div class="leftcard">
-                            <div class="dateissue">
-                                <p>25 October<br>2022</p>
+                            <div class="pic">
+                            <img src=${imgsrc} style="width:80%; padding-left:20% ;">
                             </div>
-                        </div>
-                        <div class="midcard">
+                            <div class="stars">
+                                <span class="fa fa-star ${rates[0]}" style="font-size:20px ;"></span>
+                                <span class="fa fa-star ${rates[1]}" style="font-size:20px ;"></span>
+                                <span class="fa fa-star ${rates[2]}" style="font-size: 20px;"></span>
+                                <span class="fa fa-star ${rates[3]}" style="font-size:20px ;"></span>
+                                <span class="fa fa-star ${rates[4]}" style="font-size:20px ;"></span>
+                            </div>
                             <div>
-                                <p>Test id: ${elem.id}</p>
-                            </div>
-                            <div>
-                                <p>Date to be paid off: ${elem.payment_deadline === null?'N/A' : elem.payment_deadline}</p>
-                            </div>
-                            <div>
-                                <p>Doctor id : ${elem.doctor}</p>
+                                <button class="bookbtn">Book appointment</button>
                             </div>
                         </div>
-                        <div class="rightcard">
-                            <button onclick="fun('myModal${cnt}','buttn${cnt}','close${cnt}')"id="buttn${cnt}">
-                                Details
-                            </button>
+                        <div class="details">
+                            <div>Name: ${elem.name}</div>
+                            <div>Age: ${elem.age}</div>
+                            <div>Gender: ${elem.gender}</div>
+                            <div>Hospital: ${elem.hospital.name}</div>
+                            <div>Specialization: ${elem.specialization}</div>
+                            <div>Consultation fees: ${elem.consultation_charges}</div>
                         </div>
-                        <div id="myModal${cnt}" class="modal">
-                            <div class="modal-content">
-                            <span id="close${cnt}">&times;</span>
-                            <table class="tabb" >
-                                <tr><th>Medicine</th><th>Dosage</th><th>Cost</th></tr>
-                                <tr><td>Paracetamol 50 mg</td><td>1 time a day in morning for 1 week</td><td>$12</td></tr>
-                                <tr><td>Paracetamol 50 mg</td><td>1 time a day in morning for 1 week</td><td>$12</td></tr>
-                                <tr><td>Paracetamol 50 mg</td><td>1 time a day in morning for 1 week</td><td>$12</td></tr>
-                            </table>
-                            </div>
-                        </div>
+                    </div>
                     `
                     console.log(e1);
-                    let meds=elem.tests;
-                    let putt=`
-                    <tr><th>Tests</th><th>Recommendation</th><th>Cost</th></tr>`;
-                    meds.forEach((med)=>{
-                        let str=`<tr>`;
-                        str+=`<th>${med.name}</th>`;
-                        str+=`<th>${med.recommendation}</th>`;
-                        str+=`<th>${med.cost}</th>`
-                        str+=`</tr>`
-                        putt+=str;
-                    })
-                    console.log(e1.getElementsByClassName('tabb')[0].innerHTML);
-                    console.log(putt);
-                    e1.getElementsByClassName('tabb')[0].innerHTML=putt;
-                    console.log(e1);
-                    document.getElementById("prescriptionlist").appendChild(e1);
-                    console.log(document.getElementById('prescriptionlist'));
+                    document.getElementById("adddoctor").appendChild(e1);
+                    console.log(document.getElementById('adddoctor'));
                     cnt+=1;
                 });
+                const e2=document.createElement('div');
+                e2.innerHTML=`<div style="position:relative;top:100% ;height: 30px"></div>`;
+                document.getElementById("adddoctor").appendChild(e2);
             })
             .catch((error) => {
                 console.log(error)

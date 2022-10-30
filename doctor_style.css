@@ -15,9 +15,8 @@ html,body{
     border-top-right-radius: 40px;
     overflow: hidden;
 }
-
 .right{
-    width: 76.5%;
+    width: 79.5%;
     right: 0%;
     padding: 1.5%;
     height: calc(100%);
@@ -29,18 +28,6 @@ html,body{
     grid-column-gap:4% ;
 }
 
-.right{
-    width: 76.5%;
-    right: 0%;
-    padding: 1.5%;
-    height: calc(100%);
-    overflow-y: scroll;
-    background-color:whitesmoke;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-row-gap: 4%;
-    grid-column-gap:4% ;
-}
 .userimg{
     display: flex;
     justify-content: center;
@@ -178,7 +165,7 @@ html,body{
   }
   
   /* Style the search field */
-  form.example input[type=text] {
+  div.example input[type=text] {
     padding: 10px;
     font-size: 17px;
     border: 1px solid grey;
@@ -188,7 +175,7 @@ html,body{
   }
   
   /* Style the submit button */
-  form.example button {
+  div.example button {
     float: left;
     width: 20%;
     padding: 10px;
@@ -200,12 +187,12 @@ html,body{
     cursor: pointer;
   }
   
-  form.example button:hover {
+  div.example button:hover {
     background:  rgb(166, 107, 221);
   }
   
   /* Clear floats */
-  form.example::after {
+  div.example::after {
     content: "";
     clear: both;
     display: table;
@@ -325,8 +312,6 @@ html,body{
     
     border: none;
     padding: 3%;
-    margin-top: 3%;
-    margin-left: 70%;
     border-radius:20px ;
     font-weight: bold;
     font-size: 80%;

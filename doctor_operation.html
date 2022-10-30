@@ -56,18 +56,20 @@
         </div> -->
 
     <div class="split right">
-      <div></div>
-      <div class="search>
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      />
-      <form class="example" action="action_page.php">
-        <input type="text" placeholder="Enter the Patient ID" name="search" />
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
+      <div> 
+      <div>
+        <button class="addbtn" onclick="fun('myModaladdo','buttnaddo','closeaddo')"id="buttnaddo">Recommend Operation</button>
     </div>
-
+      </div>
+      <div class="search">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+      <div class="example" >
+        <input  id="patientid" type="text" placeholder="Enter the Patient ID" name="search" />
+        <button  onclick="show()"><i class="fa fa-search"></i></button>
+      </div>
+    </div>
+    
+<!-- 
     <div>
       <div class="details">
         <div style="text-align: center" class="opdate"><b>25 Oct 2022</b></div>
@@ -79,17 +81,6 @@
         <div><b>Duration:</b> 2 weeks</div>
       </div>
     </div>
-    <div>
-        <div class="details">
-          <div style="text-align: center" class="opdate"><b>25 Oct 2022</b></div>
-          <br />
-          <div><b>Operation ID:</b> #12345</div>
-          <div><b>Name:</b> Heart Operation</div>
-          <div><b>Reason:</b> Very Nice</div>
-          <div><b>Recommended by:</b> Dr Sani</div>
-          <div><b>Duration:</b> 2 weeks</div>
-        </div>
-      </div>
       <div>
         <div class="details">
           <div style="text-align: center" class="opdate"><b>25 Oct 2022</b></div>
@@ -101,33 +92,8 @@
           <div><b>Duration:</b> 2 weeks</div>
         </div>
       </div>
-      <div>
-        <div class="details">
-          <div style="text-align: center" class="opdate"><b>25 Oct 2022</b></div>
-          <br />
-          <div><b>Operation ID:</b> #12345</div>
-          <div><b>Name:</b> Heart Operation</div>
-          <div><b>Reason:</b> Very Nice</div>
-          <div><b>Recommended by:</b> Dr Sani</div>
-          <div><b>Duration:</b> 2 weeks</div>
-        </div>
-      </div>
-      <div>
-        <div class="details">
-          <div style="text-align: center" class="opdate"><b>25 Oct 2022</b></div>
-          <br />
-          <div><b>Operation ID:</b> #12345</div>
-          <div><b>Name:</b> Heart Operation</div>
-          <div><b>Reason:</b> Very Nice</div>
-          <div><b>Recommended by:</b> Dr Sani</div>
-          <div><b>Duration:</b> 2 weeks</div>
-        </div>
-      </div>
-      
+       -->
 
-      <div>
-        <button class="addbtn" onclick="fun('myModaladdo','buttnaddo','closeaddo')"id="buttnaddo">Recommend Operation</button>
-    </div>
     <div id="myModaladdo" class="modal">
         <div class="modal-content">
           <span id="closeaddo">&times;</span>
@@ -172,5 +138,51 @@
 
 
     <script src="js\doctor.js"></script>
+    <script>
+      function show(){
+        let pid=document.getElementById("patientid").value;
+        console.log(pid);
+        var myHeaders = new Headers();
+        myHeaders.append("Authorization", `Token ${localStorage.getItem('token')}`);
+        myHeaders.append("Content-Type", "application/json");
+
+        var requestOptions = {
+          method: 'GET',
+          headers: myHeaders,
+          redirect: 'follow'
+        };
+
+        fetch(`http://localhost:8000/operations/${pid}`, requestOptions)
+          .then(response => response.text())
+          .then((result) =>{
+            
+            let data = JSON.parse(result)
+                    console.log(data);
+
+            data.forEach((patient)=>{
+              console.log(patient)
+              //we need to display all the operations differently 
+              patient.operations.forEach((operate)=>{
+                console.log(operate)
+                const e1=document.createElement('div');
+                e1.innerHTML=`<div class="details">
+                            <div style="text-align: center" class="opdate"><b>25 Oct 2022</b></div>
+                            <br />
+                            <div><b>Patient ID:</b> ${patient.patient}</div>
+                            <div><b>Doctor ID:</b> ${patient.doctor}</div>
+                            <div><b>Operation Name:</b> ${operate.name}</div>
+                            <div><b>Recommended by:</b>${operate.recommendation}</div>
+                            <div><b>Cost:</b> ${operate.cost}</div>
+                          </div>`;
+                document.getElementsByClassName("split right")[0].appendChild(e1);
+              })
+            
+            })
+            
+          })
+          .catch(error => console.log('error', error));
+      }
+      
+    </script>
   </body>
 </html>
