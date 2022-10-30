@@ -21,7 +21,7 @@
             background-size: cover;
             border-radius: 110px;
           "
-        />
+          />
       </div>
       <div class="navbar">
         <button class="btn" onclick="window.location.href='doctor_home.html'">
@@ -90,43 +90,50 @@
           <span id="closeaddm">&times;</span>
           <!-- form -->
           <div class="form-style-5">
-            <form>
-
-
               <fieldset>
-                <legend><span class="number">1</span>Enter the Medical Test ID</legend>
-                <input type="text" name="field1" placeholder="Test ID...">
-                 </label>
-            </fieldset>
+                <legend><span class="number">1</span>Enter the Patient  ID</legend>
+                <input id="patienttid" type="text" name="field1" placeholder="Patient ID...">
+              </fieldset>
 
               <fieldset>
                 <legend><span class="number">2</span>Name of the Test</legend>
-                <input type="text" name="field1" placeholder="Enter the name of the Test...">
-                </fieldset>
+                <table id="tests">
+                  <tr>
+                    <th>Name</th>
+                    <th>Recommendation</th>
+                    <th>Cost</th>
+                  </tr>
+                </table>
 
-            <fieldset>
-            <legend><span class="number">3</span>Reason for the test</legend>
-            <textarea class="texta" name="field3" placeholder="Mention the reason for which test is required.."></textarea>
-        </fieldset>
+                <br>
+                <label for="testname" > Name of Medicine
+                  <input id="testname"  type="text" >
+               </label>
+
+
+                 <label for="recomm">Recommendation :</label>
+                 <input id="recomm"  type="text" >  
+                 <label for="cost" > Cost
+                  <input id="cost"  type="number" >
+                 </label>
+              
+                  <button onclick="addtest()">Add test</button>
+              
+              </fieldset>
 
             <!-- <fieldset>
             <legend><span class="number">4</span>Expected Duration</legend>
             <input type="text" name="field1" placeholder="In number of weeks">
             </fieldset> -->
+            <button onclick="submittest()"> Submit test </button>
+            <h3 id="error" style="color: red;"></h3> 
+            <h3 id="message" style="color: green;"></h3>
 
-            <fieldset>
-                <legend><span class="number">5</span>Approximate Cost (in ₹)</legend>
-                <input type="text" name="field1" placeholder="Enter the approximate amount to be charged...">
-                 </label>
-            </fieldset>
-
-            <input type="submit" value="Suggest Test" />
-            </form>
             </div>
         </div>
     </div>
 
-
+    </div>
     <script src="js\doctor.js"></script>
     <script>
       //simialrly for test get all tests of this patient(by every doctor) and then iterate on every test 
@@ -170,6 +177,79 @@
           })
           .catch(error => console.log('error', error));
       }
+      function addtest(){
+        console.log('adding test has been called')
+        let name = document.getElementById("testname").value 
+        let cost = document.getElementById("cost").value 
+        let reco = document.getElementById("recomm").value 
+
+        let table = document.getElementById("tests");
+        var row = table.insertRow();
+
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2)
+
+
+
+        cell1.innerHTML = name
+        cell2.innerHTML = reco 
+        cell3.innerHTML = cost
+      }
+      function submittest(){
+        let patientID = document.getElementById("patienttid").value 
+          // console.log(patientID)
+          // console.log(symptoms)
+          // console.log(followup)
+          // console.log(days)
+
+          if(patientID == "" ){
+            document.getElementById("error").innerHTML = "Fields are Missing"
+            return ;
+          }
+
+          let testData = []
+        let  table = document.getElementById("tests");
+        for (var i = 1, row; row = table.rows[i]; i++) {
+          //iterate through rows
+          //rows would be accessed using the "row" variable assigned in the for loop
+          let name = row.cells[0].innerHTML
+          let rec = row.cells[1].innerHTML
+          let cost = row.cells[2].innerHTML
+          testData.push({
+            name : name, 
+            recommendation : rec, 
+            cost : cost
+          })
+
+          
+      }
+      console.log(testData);
+      var myHeaders = new Headers();
+      myHeaders.append("Authorization", `Token ${localStorage.getItem('token')}`);
+      myHeaders.append("Content-Type", "application/json");
+
+      var raw = JSON.stringify({
+        "tests":testData,
+        "patient": patientID
+      });
+
+      var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+      };
+
+      fetch("http://localhost:8000/medicaltests/", requestOptions)
+        .then(response => response.text())
+        .then((result) => {
+          console.log(result)
+          console.log('done')
+        })
+        .catch(error => console.log('error', error));
+
+    }
       
     </script>
   </body>
