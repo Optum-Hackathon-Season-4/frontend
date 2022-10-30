@@ -523,3 +523,20 @@ html,body{
   background-color:  rgb(191, 147, 233);
   
 }
+
+
+.appointcard{
+  margin: auto;
+  width: 80%;
+  background-color: rgb(245, 212, 169);
+  border-radius: 20px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.conten{
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}

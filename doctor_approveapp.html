@@ -1,0 +1,74 @@
+<!-- page for displaying home Page
+display account of the user here 
+aur nav bars for him to navigate to other pages
+nav bar: past prescriptions, doctor booking, on doctor page and allergy button to help him search for allergies and doctors related who can help -->
+<!-- or do this
+make 3 bars -> about me, past prescriptions, past doctors, past reviews 
+where to put search for doctors ?? -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HomePage</title>
+        <link rel="stylesheet" href="doctor_style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+        <div class="split left">
+            <div class="userimg" >
+                <img src="other/avatar.png" style="width: 40%; height:40% ;padding: 15px; background-size: cover; border-radius: 110px;">
+            </div>
+            <div class="navbar">
+                <button class="btn" onclick="window.location.href='doctor_home.html'">About Me</button>
+                <button class="btn" onclick="window.location.href='doctor_prescription.html'">Past Prescriptions</button>
+                <button class="btn" onclick="window.location.href='doctor_operation.html'">Past Operations</button>
+                <button class="btn" onclick="window.location.href='doctor_test.html'">Past Medical Tests</button>
+                <button class="btn" style="background-color: white;"onclick="window.location.href='doctor_approveapp.html'">Approve Appointments</button>
+                <!-- <button class="btn" onclick="window.location.href='find_doctor.html'">Find a new doctor</button> -->
+            </div>
+        </div>
+        <div class="split right" id="addappoint">
+        </div>
+        <script src="js\approveapoint.js"></script>
+        <script>
+            //get the appointments
+            var myHeaders = new Headers();
+            myHeaders.append("Authorization",`Token ${localStorage.getItem('token')}`);
+            var requestOptions = {
+            method: 'GET',
+            headers: myHeaders,
+            redirect: 'follow'
+            };
+
+            fetch("http://localhost:8000/appointments/", requestOptions)
+            .then(response => response.text())
+            .then((result)=>{
+                let data=JSON.parse(result);
+                console.log(data);
+                data.forEach((appoint)=>{
+                    console.log(appoint)
+                    //print the card of with 
+                    if(appoint.approval==false){
+                        const e1=document.createElement('div');
+                        e1.innerHTML=`
+                            <div class="appointcard">
+                                <div class="conten">
+                                    Patient id: ${appoint.patient}
+                                </div>
+                                <div class="conten">
+                                    Appointment date: ${appoint.date}
+                                </div>
+                                <div class="conten">
+                                    <button class=bookbtn onclick="approveapoin(${appoint.id})">Approve appointment</button>
+                                </div>
+                            </div>
+                        `;
+                        document.getElementById('addappoint').appendChild(e1);
+                    }
+                    
+                })
+            })
+            .catch(error => console.log('error', error));
+        </script>
+    </body>
+</html>
