@@ -52,7 +52,10 @@ function fetchDetails(event){
   fetch(`http://localhost:8000/prescriptions/${patientID}`, requestOptions)
     .then(response => response.text())
     .then((result) => {
+      
       let data = JSON.parse(result)
+
+      console.log(data)
       data.forEach((elem) => {
         document.getElementById("prescription").innerHTML += 
         `
