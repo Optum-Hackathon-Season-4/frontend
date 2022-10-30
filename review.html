@@ -89,6 +89,7 @@
 
 
         </div>
+        <script type="text/javascript" src="js\bookapointment.js"></script>
         <script>
             //Now iterate on all the feedbacks in the database 
             //which ever feedback is given by this patient?? what is his id lololol uhm
@@ -243,7 +244,8 @@
                                         <span class="fa fa-star ${rates[4]}" style="font-size:20px ;"></span>
                                     </div>
                                     <div>
-                                        <button class="bookbtn">Book appointment</button>
+                                        <button class="bookbtn"  onclick="bookappoint(this,this.nextElementSibling,${elem.id})">Book appointment</button>
+                                        <input type="text" name="popup" class="hide" placeholder="Enter in yyyy-mm-dd format">
                                     </div>
                                 </div>
                                 <div class="details">

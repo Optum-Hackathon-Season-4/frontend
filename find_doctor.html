@@ -4,7 +4,6 @@
     <head>
         <title>FindDoctorPage</title>
         <link rel="stylesheet" href="css\style9.css">
-        
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
@@ -36,8 +35,9 @@
                         <span class="fa fa-star" style="font-size:20px ;"></span>
                         <span class="fa fa-star" style="font-size:20px ;"></span>
                     </div>
-                    <div>
+                    <div >
                         <button class="bookbtn">Book appointment</button>
+                        <input type="text" name="popup" class="hide">
                     </div>
                 </div>
                 <div class="details">
@@ -53,7 +53,9 @@
             
             
         </div>
+        <script type="text/javascript" src="js\bookapointment.js"></script>
         <script>
+            cnt=0;
             let imgsrc='other\\avatar.png';
             var myHeaders = new Headers();
         //    myHeaders.append("Authorization", `Token ${JSON.parse(localStorage.getItem('token'))}`);
@@ -94,7 +96,8 @@
                                 <span class="fa fa-star ${rates[4]}" style="font-size:20px ;"></span>
                             </div>
                             <div>
-                                <button class="bookbtn">Book appointment</button>
+                                <button class="bookbtn"  onclick="bookappoint(this,this.nextElementSibling,${elem.id})">Book appointment</button>
+                                <input type="text" name="popup" class="hide" placeholder="Enter in yyyy-mm-dd format">
                             </div>
                         </div>
                         <div class="details">
