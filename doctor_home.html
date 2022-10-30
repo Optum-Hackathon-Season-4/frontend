@@ -35,36 +35,60 @@ where to put search for doctors ?? -->
                 <div class="cardhead">
                     <img src="other/avatar.png" style="width: 15%; height:20%; padding:25px ; padding-left: 60px;background-size:cover;border-radius: 150px;">
                     <div class="about">
-                       <p><b>Name_of_the_Doctor</b><br>32 (Sample Age)</p>
+                       <p id="name" ><b>Name: </b><br>Age: </p>
                     </div>
                 </div>
                 <div class="divider"></div>
                 <div class="cardabout">
                     <div class="leftabout">
-                        <div><p>
+                        <div><p id="Hospital">
                             <b>Hospital</b><br>DMC, Ludhiana
                         </p></div>
-                        <div><p>
+                        <div><p id="spez" style="margin-right: 20px;">
                             <b>Specialization</b><br>Cardiologist
                         </p></div>
-                        <div><p>
-                            <b>Gender</b><br>Female
+                        <div><p id="gender">
+                            <b >Gender: </b><br>Female
                         </p></div>
                     </div>
                     <div class="rightabout">
-                        <div><p>
-                            <b>Address of the Doctor</b><br>TIET, Patiala
+                        <div><p id="address">
+                            <b >Address: </b><br>TIET, Patiala
                         </p></div>
-                        <div><p>
-                            <b>Consultation Charges (in ₹)</b><br>2599
+                        <div><p id="consultation">
+                            <b >Consultation Charges (in ₹)</b><br>2599
                         </p></div>
                         <div>
                             <button class="detailchange">Update details</button>
                         </div>
+                        <h2 id="message" style="margin-top: 20px; color: red;"></h2>
                     </div>
                 </div>
             </div>
         </div>
-        <script src="loginutility.js"></script>
+        <script>
+       var myHeaders = new Headers();
+        myHeaders.append("Authorization", `Token ${localStorage.getItem('token')}`);
+        var requestOptions = {
+        method: 'GET',
+        headers: myHeaders,
+        redirect: 'follow'
+        };
+
+        fetch("http://localhost:8000/specificdoctorview/", requestOptions)
+        .then(response => response.text())
+        .then((result) => {
+            let data = JSON.parse(result)
+            document.getElementById("name").innerHTML = `<b>Name: ${data.name} </b><br>Age: ${data.age}`
+            document.getElementById("Hospital").innerHTML = `   <b>Hospital: </b><br>${data.hospital.name}`
+            document.getElementById("spez").innerHTML = ` <b>Specialization: </b><br>${data.specialization}`
+            document.getElementById("gender").innerHTML  = `  <b >Gender: </b><br>${data.gender}`
+            document.getElementById("address").innerHTML = `<b>Address: </b><br>${data.hospital.address}`
+            document.getElementById("consultation").innerHTML = ` <b >Consultation Charges (in ₹): </b><br>${data.consultation_charges}`
+        })
+        .catch((error) => {
+            document.getElementById("message").innerHTML = "Couldn't Fetch Details"
+        });
+        </script>
     </body>
 </html>
